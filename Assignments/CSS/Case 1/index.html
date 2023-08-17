@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,7 @@
 
         }
 
-        .first-round{
+        .first-round {
             position: absolute;
             border: 2px solid;
             width: 30%;
@@ -29,9 +30,10 @@
             bottom: 0%;
             margin: auto;
             border-radius: 100%;
-            background: rgb(253, 253,253);
-            border-color: rgb(253, 253,253);;
-            }
+            background: rgb(253, 253, 253);
+            border-color: rgb(253, 253, 253);
+            ;
+        }
 
         .square {
             position: absolute;
@@ -40,11 +42,11 @@
             height: 50%;
             right: 0;
             left: 0;
-            top: 0 ;
+            top: 0;
             bottom: 0;
             margin: auto;
             background: red;
-            border-color: red;   
+            border-color: red;
         }
 
         .second-box {
@@ -58,7 +60,8 @@
             border-color: green;
 
         }
-        .third-box{
+
+        .third-box {
             position: absolute;
             border: 2px solid;
             width: 50%;
@@ -70,7 +73,7 @@
 
         }
 
-        .fourth-box{
+        .fourth-box {
             position: absolute;
             border: 2px solid;
             width: 50%;
@@ -78,7 +81,7 @@
             right: 0%;
             bottom: 0%;
             background: rgb(255, 0, 208);
-            border-color:rgb(255, 0, 208);
+            border-color: rgb(255, 0, 208);
         }
 
         .main-square {
@@ -96,60 +99,109 @@
             background: white;
         }
 
-        .main-round{
+        .main-round {
             position: absolute;
             border: 2px solid;
             width: 60%;
             height: 60%;
             right: 0;
             left: 0;
-            top: 0 ;
+            top: 0;
             bottom: 0;
             margin: auto;
             background: red;
-            border-color: red; 
+            border-color: red;
             border-radius: 100%;
-            
+
         }
-        .round-one{
+
+        .round-one {
             position: absolute;
             background-color: white;
             width: 100px;
-            height: 100px;   
+            height: 100px;
             top: 0%;
             left: 0%;
             border-bottom-right-radius: 180px;
         }
-        .round-two{
+
+        .round-two {
             position: absolute;
             background-color: white;
             width: 100px;
-            height: 100px;   
+            height: 100px;
             top: 0%;
             right: 0%;
             border-bottom-left-radius: 180px;
         }
-        .round-three{
+
+        .round-three {
             position: absolute;
             background-color: white;
             width: 100px;
-            height: 100px;   
+            height: 100px;
             bottom: 0%;
+            left: 0%;
             border-top-right-radius: 180px;
         }
-        .round-four{
+
+        .round-four {
             position: absolute;
             background-color: white;
             width: 100px;
-            height: 100px;   
-            bottom: 0%;
+            height: 100px;
             right: 0%;
+            bottom: 0%;
             border-top-left-radius: 180px;
         }
 
+        .b1 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 0%;
+            right: 0%;
+            border-bottom-left-radius: 180px;
+            background-color: rgb(255, 255, 255);
+
+        }
+
+        .b2 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 0%;
+            left: 0%;
+            border-bottom-right-radius: 180px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .b3 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            bottom: 0%;
+            right: 0%;
+            border-top-left-radius: 180px;
+            background-color: rgb(255, 255, 255);
+
+        }
+
+        .b4 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            bottom: 0%;
+            left: 0%;
+            margin: auto;
+            border-top-right-radius: 180px;
+            background-color: rgb(255, 255, 255);
+
+        }
     </style>
 
 </head>
+
 <body>
     <section>
         <section class="first-box">
@@ -179,15 +231,29 @@
         <div class="main-square">
             <div class="main-round"></div>
         </div>
-            <div class="round-one"></div>
-            <div class="round-two"></div>
-            <div class="round-three"></div>
-            <div class="round-four"></div>
-            <div class="round-five"></div>
-            <div class="round-six"></div>
-    
+
+        <div class="round-one">
+            <div class="b1"></div>
+        </div>
+
+        <div class="round-two">
+            <div class="b2"></div>
+        </div>
+
+        <div class="round-three">
+            <div class="b3"></div>
+        </div>
+
+        <div class="round-four">
+            <div class="b4"></div>
+        </div>
+
+        <div class="round-five"></div>
+        <div class="round-six"></div>
+
 
     </section>
 
 </body>
+
 </html>
