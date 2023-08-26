@@ -27,3 +27,12 @@ ScrollReveal({
 ScrollReveal().reveal('.home-content, .heading',{ origin:'top' })
 ScrollReveal().reveal('.home-img, .services-container, .projects-box, .contact',{ origin:'bottom' })
 ScrollReveal().reveal('.home-content h1, .about',{ origin:'left' })
+
+
+const typed = new Typed('.multiple-text', {
+    strings: ['Fullstack Developer','Frontend Developer','Web Developer'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+});
