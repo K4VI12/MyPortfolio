@@ -17,23 +17,13 @@ window.onscroll = () => {
     });
 };
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Get all the navigation links
-    const navLinks = document.querySelectorAll(".navbar a");
-
-    // Add a click event listener to each link
-    navLinks.forEach(link => {
-        link.addEventListener("click", function(event) {
-            // Prevent the default behavior (going to the link)
-            event.preventDefault();
-
-            // Get the target element's ID from the href attribute
-            const targetId = link.getAttribute("href");
-
-            // Scroll to the target element using JavaScript
-            document.querySelector(targetId).scrollIntoView({
-                behavior: "smooth"
-            });
-        });
-    });
+ScrollReveal({
+    reset: true,
+    distance: '80px',
+    duration: 1000,
+    delay: 250
 });
+
+ScrollReveal().reveal('.home-content, .heading',{ origin:'top' })
+ScrollReveal().reveal('.home-img, .services-container, .projects-box, .contact',{ origin:'bottom' })
+ScrollReveal().reveal('.home-content h1, .about',{ origin:'left' })
