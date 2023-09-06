@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets\8.0.1_normalize.css">
+    <title>Case 5</title>
+
+    <style>
+        section:nth-child(1){
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(255, 255, 255);
+            border: 0px solid;
+        }
+
+        div{
+            border: 2px solid;
+            border-color: black;
+        }
+
+        section:nth-child(1)>section:nth-child(1)>div:nth-child(1){
+            position: absolute;
+            width: 25%;
+            height: 33%;
+            top: 0%;
+            left: 0%;
+            background-color: red;
+        }
+
+        section:nth-child(1)>section:nth-child(1)>div:nth-child(4){
+            position: absolute;
+            width: 25%;
+            height: 33%;
+            top: 0%;
+            right: 0%;
+            background-color: purple;
+        }
+
+        section:nth-child(1)>section:nth-child(1)>div:nth-child(3){
+            position: absolute;
+            width: 50%;
+            height: 33%;
+            top: 0%;
+            left: 0%;
+            right: 0%;
+            margin: auto;
+            background-color: orangered;
+        }
+
+        section:nth-child(1)>section:nth-child(1)>div:nth-child(3)>div{
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: 0%;
+            left: 0%;
+            border: 0px solid;
+            background-color: green;
+        }
+
+        /*Second Line*/
+
+        section:nth-child(1)>section:nth-child(2)>div:nth-child(1){
+            position: absolute;
+            width: 25%;
+            height: 35%;
+            top: 0%;
+            left: 0%;
+            bottom: 0%;
+            margin: auto;
+            background-color: rgb(247, 16, 182);
+        }
+
+        section:nth-child(1)>section:nth-child(2)>div:nth-child(4){
+            position: absolute;
+            width: 25%;
+            height: 35%;
+            top: 0%;
+            right: 0%;
+            bottom: 0%;
+            margin: auto;
+            background-color: rgb(211, 108, 211);
+        }
+
+        section:nth-child(1)>section:nth-child(2)>div:nth-child(3){
+            position: absolute;
+            width: 50%;
+            height: 35%;
+            top: 0%;
+            left: 0%;
+            right: 0%;
+            bottom: 0%;
+            margin: auto;
+            background-color: rgb(206, 56, 56);
+        }
+
+        section:nth-child(1)>section:nth-child(2)>div:nth-child(3)>div{
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: 0%;
+            left: 0%;
+            border: 0px solid;
+            background-color: blue;
+        }
+
+        /*Third Line*/
+        section:nth-child(1)>section:nth-child(3)>div:nth-child(1){
+            position: absolute;
+            width: 25%;
+            height: 35%;
+            left: 0%;
+            bottom: 0%;
+            background-color: rgb(74, 0, 134);
+        }
+
+        section:nth-child(1)>section:nth-child(3)>div:nth-child(4){
+            position: absolute;
+            width: 25%;
+            height: 35%;
+            right: 0%;
+            bottom: 0%;
+            background-color: rgb(0, 171, 205);
+        }
+
+        section:nth-child(1)>section:nth-child(3)>div:nth-child(3){
+            position: absolute;
+            width: 50%;
+            height: 35%;
+            left: 0%;
+            right: 0%;
+            bottom: 0%;
+            margin: auto;
+            background-color: rgb(5, 148, 150);
+        }
+
+        section:nth-child(1)>section:nth-child(3)>div:nth-child(3)>div{
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: 0%;
+            left: 0%;
+            border: 0px solid;
+            background-color: rgb(205, 205, 2);
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <!--First Line-->
+        <section>
+            <div></div>
+            <div></div>
+            <div>
+                <div></div>
+            </div>
+            <div></div>
+        </section>
+
+        <!--Second Line-->
+        <section>
+            <div></div>
+            <div></div>
+            <div>
+                <div></div>
+            </div>
+            <div></div>
+        </section>
+
+        <!--Third Line-->
+        <section>
+            <div></div>
+            <div></div>
+            <div>
+                <div></div>
+            </div>
+            <div></div>
+        </section>
+
+    </section>
+</body>
+</html>

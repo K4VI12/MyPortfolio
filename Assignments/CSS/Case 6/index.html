@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets\8.0.1_normalize.css">
+    <title>Case 6</title>
+    <style>
+        section:nth-child(1){
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            border: 0px solid;
+        }
+
+        section:nth-child(1)>section:nth-child(1)>section{
+            position: absolute;
+            width: 75%;
+            height: 33%;
+            top: 0%;
+            left: 0%;
+            background-color: red;
+            border: 2px solid;
+        }
+
+        section:nth-child(1)>section:nth-child(1)>section>div{
+            position: absolute;
+            width: 33%;
+            height: 100%;
+            top: 0%;
+            right: 0%;
+            background-color: green;
+            border-left: 2px solid;
+        }
+
+        section:nth-child(1)>section:nth-child(2){
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            top: 0%;
+            right: 0%;
+            background-color: orangered;
+            border-left: 2px solid;
+        }
+
+        section:nth-child(1)>section:nth-child(3)>section{
+            position: absolute;
+            width: 75%;
+            height: 33%;
+            top: 0%;
+            left: 0%;
+            bottom: 0%;
+            margin: auto;
+            background-color: purple;
+            border-bottom: 2px solid;
+            border-right: 2px solid;
+        }
+
+        section:nth-child(1)>section:nth-child(3)>section>div:nth-child(1){
+            position: absolute;
+            width: 33%;
+            height: 100%;
+            top: 0%;
+            left: 0%;
+            right: 0%;
+            margin: auto;
+            background-color: rgb(232, 52, 178);
+            border-right: 2px solid;
+            border-left: 2px solid;
+        }
+
+        section:nth-child(1)>section:nth-child(3)>section>div:nth-child(2){
+            position: absolute;
+            width: 33%;
+            height: 100%;
+            top: 0%;
+            right: 0%;
+            background-color: blue;
+            border-right: 2px solid;
+            border-left: 2px solid;
+        }
+
+        section:nth-child(1)>section:nth-child(4)>div{
+            position: absolute;
+            width: 75%;
+            height: 34%;
+            left: 0%;
+            bottom: 0%;
+            background-color: rgb(69, 1, 120);
+            border-top: 2px solid;
+            border-right: 2px solid;
+        }
+
+        section:nth-child(1)>section:nth-child(4)>div>div{
+            position: absolute;
+            width: 33%;
+            height: 100%;
+            left: 0%;
+            bottom: 0%;
+            background-color: rgb(202, 39, 39);
+            border-left: 2px solid;
+            border-right: 2px solid;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <!--First Line-->
+        <section>
+            <section>
+                <div></div>
+            </section>
+        </section>
+
+        <!--Right Side Line-->
+        <section></section>
+
+        <!--Second Line-->
+        <section>
+            <section>
+                <div></div>
+                <div></div>
+            </section>
+        </section>
+
+        <!--Third Line-->
+
+        <section>
+            <div>
+                <div></div>
+            </div>
+        </section>
+        
+    </section>
+</body>
+</html>
