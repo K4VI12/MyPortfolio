@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case 3</title>
+    <link rel="stylesheet" href="assets/8.0.1_normalize.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+    <Style>
+       body>div{
+        width: 400px;
+        height: 400px;
+        border: 5px solid grey;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background: url("assets/room1.jpg");
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+       }
+  
+       div>div{
+        width: 400px;
+        height:400px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: black;
+        transition-duration: 4s;
+        transition-property: all;
+
+       }
+
+       body>div:hover div{
+        transition-duration: 4s;
+        transition-property: all;
+            top: 0;
+            opacity: 0.4;
+       }
+
+       div>i{
+        width: max-content;
+        height: max-content;
+        font-size: 100px;
+        color: white;
+        position: absolute;
+        left: 0;
+        bottom: 100%;
+        right: 0;
+        margin: auto;
+        transition-duration: 4s;
+        transition-property: all;
+       }
+
+       body>div:hover i{
+        transition-duration: 4s;
+        transition-property: all;
+           bottom: 50%;
+       }
+    </Style>
+</head>
+
+<body>
+
+    <div>
+<div>
+   
+</div>
+<i class='bx bx-trash' style='color:#7b6969'  ></i>
+</div>
+
+   
+</body>
+
+</html>
