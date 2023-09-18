@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case 4</title>
+    <link rel="stylesheet" href="assets/8.0.1_normalize.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <Style>
+        body>div{
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+        
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border: 5px solid grey;
+            border-top: 5px solid red;
+        }
+
+
+        div:hover {
+            transition-duration: 6s;
+            transform: rotate(360deg);
+            transition-property: all;
+
+        }
+
+        body>div>div{
+            width: 5px;
+            height:100px;
+           
+            background-color: red;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 70px;
+            left: 70px;
+            margin: auto;
+            transform: rotate(45deg);
+        }
+
+        body>div>div>div{
+            width:  20px;
+            height: 20px;
+            border-radius: 100%;
+            background-color: red;
+            position: relative;
+            bottom: 10px;
+            right: 5px;
+           
+        }
+
+        /* div:hover h1{
+            transition-duration: 6s;
+            transform: rotate(-360deg);
+
+        } */
+    </Style>
+</head>
+
+<body>
+
+    <div>
+        <div>
+            <div></div>
+        </div>
+       
+    </div>
+
+</body>
+
+</html>
