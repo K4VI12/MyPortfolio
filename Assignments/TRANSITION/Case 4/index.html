@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case4</title>
+    <link rel="stylesheet" href="assets/8.0.1_normalize.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <style>
+        section{
+            width: 30vw;
+            height: 30vw;
+            border-radius: 100%;
+            position: absolute;
+            margin: auto;
+            border: 15px solid #978989;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            border-top: 15px solid red;
+            display: flex;
+        }
+
+        section>div:first-child{
+            width: 20px;
+            height: 15vw;
+            position: absolute;
+            margin: auto;
+            background-color: red;
+            top: 0;
+            bottom: 22vh;
+            left: 10vw;
+            right: 0;
+            transform: rotate(40deg);
+        }
+
+        section>div>div:last-child{
+            width: 35px;
+            height: 35px;
+            position: relative;
+            top: -5vh;
+            right: 0.5vw;
+            border-radius: 100%;
+            background-color: red;
+        }
+
+        section:hover{
+            transform: rotate(360deg);
+            transition-duration: 3s;
+
+        }
+
+    </style>
+</head>
+<body>
+<section>
+    <div>
+        <div></div>
+    </div>
+</section>
+</body>
+</html>
