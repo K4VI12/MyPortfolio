@@ -11,10 +11,14 @@
     <meta name="Owner" content="Kavindu Hansaka">
     <meta name="authur" content="Kavindu Hansaka">
     <meta name="theme-color" content="Blue">
-    <meta name="viewport"content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Kavindu Hansaka</title>
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&display=swap" rel="stylesheet">
 
     <!-- <link rel="stylesheet" href="style.css"> -->
 
@@ -29,6 +33,7 @@
             scroll-behavior: smooth;
             font-family: "Raleway", sans-serif;
             font-family: "Source Code Pro", monospace;
+            font-family: 'Mooli', sans-serif;
         }
 
         ::-webkit-scrollbar {
@@ -36,14 +41,14 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background:linear-gradient(to top, #008aff,#00ffe7);
+            background: linear-gradient(to top, #F8F4EA, #579BB1);
             border-radius: 6px;
             animation: animate 5s linear infinite;
 
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background-color: var(--bg-color);
+            background-color: transparent;
         }
 
 
@@ -52,7 +57,7 @@
             --second-bg-color: #579BB1;
             --text-color: #F8F4EA;
             --main-color: #DAC0A3;
-            
+
         }
 
         html {
@@ -129,9 +134,11 @@
             0% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-2.4rem);
             }
+
             100% {
                 transform: translateY(0);
             }
@@ -213,6 +220,8 @@
         .heading {
             text-align: center;
             font-size: 6.5rem;
+            text-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+
         }
 
         .about-content h2 {
@@ -240,17 +249,24 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 5rem; 
+            gap: 5rem;
+
         }
 
         .services-container .services-box {
             flex: 1 1 30rem;
-            background: var(--second-bg-color);
+            background: rgba(255, 255, 255, .1);
             padding: 9rem 2rem 9rem;
             border-radius: 4rem;
             text-align: center;
-            border: 0.5rem solid var(--bg-color);
             transition: .7s ease;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, .2);
+            border: 0.5rem solid rgba(255, 255, 255, .5);
+            border-right: 0.5rem solid rgba(255, 255, 255, .2);
+            border-bottom: 0.5rem solid rgba(255, 255, 255, .2);
+            border-left: 0.5rem solid rgba(255, 255, 255, .2);
+            border-top: 0.5rem solid rgba(255, 255, 255, .2);
+            backdrop-filter: blur(10px);
         }
 
         .services-container .services-box:hover {
@@ -265,6 +281,8 @@
 
         .services-box h3 {
             font-size: 4rem;
+            text-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+
         }
 
         .services-box p {
@@ -290,7 +308,7 @@
         .projects-container .projects-box {
             position: relative;
             border-radius: 2rem;
-            box-shadow: 0 0 1rem var(--bg-color);
+            box-shadow: 0 0 3rem rgba(204, 197, 197, 0.5);
             overflow: hidden;
             display: flex;
         }
@@ -375,8 +393,8 @@
             width: 100%;
             padding: 2.5rem;
             font-size: 1.6rem;
-            color: var(--text-color);
-            background: var(--second-bg-color);
+            color: black;
+            background: #F7EDDB;
             border-radius: .8rem;
             margin: .7rem 0;
         }
@@ -412,29 +430,29 @@
             justify-content: center;
             align-items: center;
             padding: .8rem;
-            background: var(--main-color);
+            background: #606C5D;
             border-radius: .8rem;
             transition: .5s ease;
         }
 
         .footer-iconTop a:hover {
-            box-shadow: 0 0 1rem var(--main-color);
+            box-shadow: 0 0 4rem #E3F6FF;
         }
 
         .footer-iconTop a i {
             font-size: 2.4rem;
-            color: var(--second-bg-color);
+            color: var(--text-color);
 
         }
 
         @media (max-width: 1200px) {
-            html{
+            html {
                 font-size: 55%;
             }
         }
 
         @media (max-width: 991px) {
-            .header{
+            .header {
                 padding: 2rem 3%;
             }
 
@@ -451,20 +469,20 @@
             }
 
             .contact {
-                 min-height: auto;
+                min-height: auto;
             }
 
             .footer {
                 padding: 3rem 3%;
             }
         }
-        
+
         @media (max-width: 768px) {
             #menu-icon {
                 display: block;
             }
 
-            .navbar { 
+            .navbar {
                 position: absolute;
                 top: 100%;
                 left: 0;
@@ -511,10 +529,10 @@
                 width: 70vw;
                 margin-top: 4rem;
             }
-            
+
             .services h2 {
                 margin-bottom: 3rem;
-            } 
+            }
 
             .projects h2 {
                 margin-bottom: 3rem;
@@ -525,7 +543,7 @@
             }
         }
 
-        @media (max-width: 617px){
+        @media (max-width: 617px) {
             .projects-container {
                 grid-template-columns: 1fr;
             }
@@ -540,7 +558,7 @@
                 width: 100%;
             }
         }
-        
+
         @media (max-width: 365px) {
             .home-img img {
                 width: 90vw;
@@ -589,10 +607,14 @@
                 <P>" Don't wait for inspiration. It comes while working. "</P>
 
                 <div class="social-media">
-                    <a target="_blank" href="https://github.com/K4VI12"><i class='bx bxl-github' style='color:#584f48'></i>
-                    <a target="_blank" href="https://instagram.com/_k.avi__?igshid=ZDc4ODBmNjlmNQ=="><i class='bx bxl-instagram-alt' style='color:#ff6464'></i>
-                    <a target="_blank" href="https://www.linkedin.com/in/kavindu-hansaka-304b4a273"><i class='bx bxl-linkedin-square' style='color:#0a66c2'></i>
-                    <a target="_blank" href="https://twitter.com/kavinduhansak15"><i class='bx bxl-twitter' style='color:#26a7de'></i>
+                    <a target="_blank" href="https://github.com/K4VI12"><i class='bx bxl-github'
+                            style='color:#584f48'></i>
+                        <a target="_blank" href="https://instagram.com/_k.avi__?igshid=ZDc4ODBmNjlmNQ=="><i
+                                class='bx bxl-instagram-alt' style='color:#ff6464'></i>
+                            <a target="_blank" href="https://www.linkedin.com/in/kavindu-hansaka-304b4a273"><i
+                                    class='bx bxl-linkedin-square' style='color:#0a66c2'></i>
+                                <a target="_blank" href="https://twitter.com/kavinduhansak15"><i class='bx bxl-twitter'
+                                        style='color:#26a7de'></i>
                 </div>
                 <!-- <a href="#" class="btn">Downlode CV</a> -->
                 <a target="_blank" href="assets/KAVINDU CV.pdf" class="btn">Download CV</a>
@@ -615,9 +637,10 @@
                 <h2 class="heading">About <span>Me</span></h2>
                 <!-- <h3>Frontend Developer</h3> -->
                 <p>In 2022, I began my software engineering journey at IJSE- Institute of Software Engineering.
-                     Ater My A/L's, fascination for computers, I pursue a degree in software engineering. 
-                     Now, I aspire to create innovative solutions using my software engineering skills.</p>
-                <a target="_blank" href="https://www.linkedin.com/in/kavindu-hansaka-304b4a273" class="btn">Read More</a>
+                    Ater My A/L's, fascination for computers, I pursue a degree in software engineering.
+                    Now, I aspire to create innovative solutions using my software engineering skills.</p>
+                <a target="_blank" href="https://www.linkedin.com/in/kavindu-hansaka-304b4a273" class="btn">Read
+                    More</a>
             </div>
         </section>
 
@@ -628,7 +651,7 @@
 
             <div class="services-container">
                 <div class="services-box">
-                    <i class='bx bx-code-alt'></i>
+                    <i class='bx bx-code-alt' style='color:#BFDB38'></i>
                     <h3>Web Development</h3>
                     <p>Stay up-to-date with the latest web design trends</p>
                     <!-- <p>Designing the web's tomorrow, today</p> -->
@@ -636,14 +659,14 @@
                 </div>
 
                 <div class="services-box">
-                    <i class='bx bxs-paint'></i>
+                    <i class='bx bxs-spray-can' style='color:#FA7070'></i>
                     <h3>Graphic Design</h3>
                     <p>Explore the world of graphic design.</p>
                     <a href="" class="btn">Read More</a>
                 </div>
 
                 <div class="services-box">
-                    <i class='bx bxs-bar-chart-alt-2'></i>
+                    <i class='bx bxs-bar-chart-alt-2' style='color:#FFD95A'></i>
                     <h3>Digital Marketing</h3>
                     <p>Driving Digital Excellence for Your Brand.</p>
                     <a href="" class="btn">Read More</a>
@@ -654,14 +677,14 @@
         <!-- projects section -->
         <section class="projects" id="projects">
             <h2 class="heading">Latest <span>Projects</span></h2>
-5
             <div class="projects-container">
                 <div class="projects-box">
                     <img src="assets/room1.jpg" alt="">
                     <div class="projects-layer">
                         <h4>Saloon Management System</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, saepe?</p>
-                        <a target="_blank" href="https://github.com/K4VI12/Saloon-Management-System.git" <i class='bx bx-link-external'></i></a>
+                        <p>Saloon Management System Call GSN - Global Saloon Network <br>(OOP Final Project)</p>
+                        <a target="_blank" href="https://github.com/K4VI12/Saloon-Management-System.git" <i
+                            class='bx bx-link-external'></i></a>
                     </div>
                 </div>
 
@@ -669,8 +692,9 @@
                     <img src="assets/room1.jpg" alt="">
                     <div class="projects-layer">
                         <h4>Marks Management System</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                        <a target="_blank" href="https://github.com/K4VI12/Marks-Management-System.git" <i class='bx bx-link-external'></i></a>
+                        <p>Marks Management System Can Manage Student Marks <br>(PRF Final Project)</p>
+                        <a target="_blank" href="https://github.com/K4VI12/Marks-Management-System.git" <i
+                            class='bx bx-link-external'></i></a>
                     </div>
                 </div>
 
@@ -678,8 +702,9 @@
                     <img src="assets/room1.jpg" alt="">
                     <div class="projects-layer">
                         <h4>Connetct for Game</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                        <a target="_blank" href="https://github.com/K4VI12/connect-four-game.git" <i class='bx bx-link-external'></i></a>
+                        <p>JAVA Swing Game Can Play With AI</p>
+                        <a target="_blank" href="https://github.com/K4VI12/connect-four-game.git" <i
+                            class='bx bx-link-external'></i></a>
                     </div>
                 </div>
 
@@ -687,8 +712,9 @@
                     <img src="assets/room1.jpg" alt="">
                     <div class="projects-layer">
                         <h4>My Protfoilo</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                        <a target="_blank" href="https://github.com/K4VI12/MyPortfolio.git" <i class='bx bx-link-external'></i></a>
+                        <p>HTML / CSS / JavaScript Responsive Website</p>
+                        <a target="_blank" href="https://github.com/K4VI12/MyPortfolio.git" <i
+                            class='bx bx-link-external'></i></a>
                     </div>
                 </div>
 
@@ -696,17 +722,19 @@
                     <img src="assets/room1.jpg" alt="">
                     <div class="projects-layer">
                         <h4>Chat Application</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                        <a target="_blank" href="https://github.com/K4VI12/ChatApplication.git" <i class='bx bx-link-external'></i></a>
+                        <p>Chat Application Created by JAVA Threads</p>
+                        <a target="_blank" href="https://github.com/K4VI12/ChatApplication.git" <i
+                            class='bx bx-link-external'></i></a>
                     </div>
                 </div>
 
                 <div class="projects-box">
                     <img src="assets/room1.jpg" alt="">
                     <div class="projects-layer">
-                        <h4>Application</h4>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                        <a target="_blank" href="https://github.com/K4VI12/Hibernate-Assigment.git" <i class='bx bx-link-external'></i></a>
+                        <h4>Hibernate</h4>
+                        <p>Hibernate Assigment </p>
+                        <a target="_blank" href="https://github.com/K4VI12/Hibernate-Assigment.git" <i
+                            class='bx bx-link-external'></i></a>
                     </div>
                 </div>
 
@@ -743,7 +771,7 @@
         </footer>
 
     </main>
-    
+
 
     <script src="https://unpkg.com/scrollreveal"></script>
 
