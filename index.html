@@ -369,6 +369,85 @@
             color: var(--second-bg-color);
         }
 
+        .assignment {
+            background: var(--second-bg-color);
+        }
+
+        .assignment h2 {
+            margin-bottom: 3rem;
+        }
+
+        .assignment-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .assignment-container .assignment-box {
+            position: relative;
+            border-radius: 2rem;
+            box-shadow: 0 0 3rem rgba(204, 197, 197, 0.5);
+            overflow: hidden;
+            display: flex;
+        }
+
+        .assignment-box img {
+            width: 100%;
+            height: 100%;
+            transition: .5s ease;
+        }
+
+        .assignment-box:hover img {
+            transform: scale(1.1);
+        }
+
+        .assignment-box .assignment-layer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 0 4rem;
+            transform: translateY(100%);
+            transition: .5s ease;
+        }
+
+        .assignment-box:hover .assignment-layer {
+            transform: translateY(0);
+
+        }
+
+        .assignment-layer h4 {
+            font-size: 3rem;
+        }
+
+        .assignment-layer p {
+            font-size: 2.3rem;
+            margin: 3rem 0 1rem;
+        }
+
+        .assignment-layer a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 5rem;
+            height: 5rem;
+            background: var(--text-color);
+            border-radius: 50%;
+        }
+
+        .assignment-layer a i {
+            font-size: 5rem;
+            color: var(--second-bg-color);
+        }
+
         .contact h2 {
             margin-top: 1rem;
             margin-bottom: 3rem;
@@ -468,6 +547,10 @@
                 padding-bottom: 7rem;
             }
 
+            .assignment {
+                padding-bottom: 7rem;
+            }
+
             .contact {
                 min-height: auto;
             }
@@ -541,10 +624,22 @@
             .projects-container {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
+            .assignment h2 {
+                margin-bottom: 3rem;
+            }
+
+            .assignment-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 617px) {
             .projects-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .assignment-container {
                 grid-template-columns: 1fr;
             }
         }
@@ -592,6 +687,7 @@
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#projects">Projects</a>
+            <a href="#assignment">Assignment</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -731,6 +827,75 @@
                 <div class="projects-box">
                     <img src="assets/room1.jpg" alt="">
                     <div class="projects-layer">
+                        <h4>Hibernate</h4>
+                        <p>Hibernate Assigment </p>
+                        <a target="_blank" href="https://github.com/K4VI12/Hibernate-Assigment.git" <i
+                            class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- assimt section -->
+
+        <section class="assignment" id="assignment">
+            <h2 class="heading">Latest <span>assignment</span></h2>
+            <div class="assignment-container">
+                <div class="assignment-box">
+                    <img src="assets/room1.jpg" alt="">
+                    <div class="assignment-layer">
+                        <h4>Saloon Management System</h4>
+                        <p>Saloon Management System Call GSN - Global Saloon Network <br>(OOP Final Project)</p>
+                        <a target="_blank" href="https://github.com/K4VI12/Saloon-Management-System.git" <i
+                            class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="assignment-box">
+                    <img src="assets/room1.jpg" alt="">
+                    <div class="assignment-layer">
+                        <h4>Marks Management System</h4>
+                        <p>Marks Management System Can Manage Student Marks <br>(PRF Final Project)</p>
+                        <a target="_blank" href="https://github.com/K4VI12/Marks-Management-System.git" <i
+                            class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="assignment-box">
+                    <img src="assets/room1.jpg" alt="">
+                    <div class="assignment-layer">
+                        <h4>Connetct for Game</h4>
+                        <p>JAVA Swing Game Can Play With AI</p>
+                        <a target="_blank" href="https://github.com/K4VI12/connect-four-game.git" <i
+                            class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="assignment-box">
+                    <img src="assets/room1.jpg" alt="">
+                    <div class="assignment-layer">
+                        <h4>My Protfoilo</h4>
+                        <p>HTML / CSS / JavaScript Responsive Website</p>
+                        <a target="_blank" href="https://github.com/K4VI12/MyPortfolio.git" <i
+                            class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="assignment-box">
+                    <img src="assets/room1.jpg" alt="">
+                    <div class="assignment-layer">
+                        <h4>Chat Application</h4>
+                        <p>Chat Application Created by JAVA Threads</p>
+                        <a target="_blank" href="https://github.com/K4VI12/ChatApplication.git" <i
+                            class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="assignment-box">
+                    <img src="assets/room1.jpg" alt="">
+                    <div class="assignment-layer">
                         <h4>Hibernate</h4>
                         <p>Hibernate Assigment </p>
                         <a target="_blank" href="https://github.com/K4VI12/Hibernate-Assigment.git" <i
