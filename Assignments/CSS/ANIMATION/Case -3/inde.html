@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #slider {
+            overflow: hidden;
+            
+        }
+        #slider div {
+            position: relative;
+            width: 500%;
+            margin: 0;
+            left: 0;
+            animation: 20s slider infinite;
+        }
+
+        #slider div img {
+            float: left;
+            width: 20%;
+        }
+
+        @keyframes slider {
+            0%{
+                left: 0%;
+
+            }
+            20%{
+                left: 0%;
+
+            }
+            25%{
+                left: -100%;
+
+            }
+            45%{
+                left: -100%;
+            }
+            50%{
+                left: -200%;
+            }
+            75%{
+                left: -200%;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="slider">
+        <div>
+            <img src="assets/7446.jpg" alt="">
+            <img src="assets/9070071.png" alt="">
+            <img src="assets/9070079.jpg" alt="">
+
+        </div>
+    </div>
+</body>
+
+</html>
