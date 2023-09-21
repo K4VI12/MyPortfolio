@@ -16,6 +16,7 @@
             margin: 0;
             left: 0;
             animation: 20s slider infinite;
+            animation-direction: alternate;
         }
 
         #slider div img {
@@ -28,23 +29,14 @@
                 left: 0%;
 
             }
-            20%{
-                left: 0%;
-
-            }
-            25%{
-                left: -100%;
-
-            }
-            45%{
-                left: -100%;
-            }
             50%{
+                left: -100%;
+
+            }
+            100%{
                 left: -200%;
             }
-            75%{
-                left: -200%;
-            }
+
         }
     </style>
 
