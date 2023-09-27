@@ -4,66 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/8.0.1_normalize.css">
     <title>Document</title>
 
     <style>
-        body>div {
+        div {
             width: 200px;
             height: 100px;
             background-color: red;
             position: relative;
-            animation-name: anima;
             animation-duration: 10s;
             animation-iteration-count: infinite;
-            animation-direction: alternate;
+            animation-name: case01;
+            border-radius: 40px;
             left: 0;
-            border-radius: 15%;
+            animation-direction: alternate;
+
 
         }
 
-        @keyframes anima {
+        @keyframes case01 {
             0% {
-                background-color: aqua;
+
+                transform: rotate(0);
                 left: 0;
                 top: 0;
-
             }
 
             25% {
-                background-color: yellow;
-                left: 1600px;
-                top: 0;
-                rotate: 360deg;
 
+                transform: rotate(180deg);
+                left: 500px;
+                top: 0;
+                background-color: blue;
             }
 
             50% {
-                background-color: red;
-                left: 1600px;
-                top: 800px;
-
+                transform: rotate(360deg);
+                top: 500px;
+                left: 500px;
+                background-color: olive;
             }
 
-            75% {
-                top: 800px;
+            75%{
+                transform: rotate(180deg);
                 left: 0;
-                
+                top: 500px;
+                background-color: aqua;
             }
 
             100% {
-                background-color: black;
-                left: 0;
+                transform: rotate(380deg);
                 top: 0;
-
+                left: 0;
+                background-color: red;
+                
             }
+
+
         }
     </style>
-
 </head>
 
 <body>
-
+    <div></div>
 </body>
-<div></div>
 
 </html>

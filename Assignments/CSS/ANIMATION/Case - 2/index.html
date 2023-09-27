@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case 02</title>
+    <link rel="stylesheet" href="assets/8.0.1_normalize.css">
+
+    <style>
+
+        body{
+            background-color: black;
+        }
+        div:nth-child(1){
+            width: 300px;
+            height: 300px;
+            background-color: black;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            z-index: 1;
+        }
+
+        div:nth-child(2){
+            width: 300px;
+            height: 300px;
+            background-color: #FEFCD7;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            transform: translateX(-18px);
+            rotate: -45deg;
+            /* animation-name: moon; */
+            animation: moon 5s infinite alternate linear;
+            
+        
+        }
+
+
+        @keyframes moon{
+            0%{
+
+            }
+
+            20%{
+                transform: translateX(0px);
+                filter: drop-shadow(10px 10px 200px  #FEFCD7) drop-shadow(-10px -10px 50px  goldenrod);
+
+            }
+
+            40%{
+                transform: translateX(10px);
+                filter: drop-shadow(10px 10px 200px  goldenrod) drop-shadow(-10px -10px 50px #FEFCD7);
+
+            }
+
+            60%{
+                transform: translateX(13px);
+                filter: drop-shadow(10px 10px 200px  goldenrod) drop-shadow(-10px -10px 50px goldenrod);
+
+            }
+
+            80%{
+                transform: translateX(16px);
+              
+
+            }
+
+            100%{
+                transform: translateX(22px);
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+
+
+</body>
+</html>
