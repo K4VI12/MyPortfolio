@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Items</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+</head>
+<body>
+<header>
+    <section class="container-fluid">
+        <nav class="navbar navbar-light bg-dark bg-opacity-50 row">
+            <div class="container-fluid col">
+                <a class="navbar-brand text-danger fw-bold " href="index.html">
+                    FRESHMARKET POS SYSTEM
+                </a>
+            </div>
+        </nav>
+    </section>
+    <section class="text-center  bg-success">
+        <nav class="nav justify-content-center">
+            <a aria-current="page" class="nav-link link-light" href="index.html">HOME</a>
+            <a class="nav-link link-light" href="customers.html ">CUSTOMERS</a>
+            <div class="p text-primary-emphasis bg-warning border border-danger rounded-2">
+            <a class="nav-link link-light" href="items.html">ITEMS</a> </div>
+            <a class="nav-link link-light" href="placeOrder.html">PLACE ORDER</a>
+        </nav>
+    </section>
+</header>
+<main>
+    <section class="mt-2 container-fluid">
+        <nav class="navbar navbar-light bg-danger mt-2 ">
+            <div class="container-fluid">
+                <form class="d-flex">
+                    <input aria-label="Search" class="form-control me-2" placeholder="Item ID" type="search">
+                    <button class="btn btn-outline-danger" type="submit">  Search</button>
+                </form>
+                <p for="" class="text-end text-white fs-6">Item code : 1</p>
+            </div>
+        </nav>
+
+        <section class="row">
+            <section class="mt-4 col-3">
+                <div class="mb-3">
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+                <div class="w-100 h-75 bg-secondary bg-opacity-50"></div>
+            </section>
+
+            <form class="container-fluid mt-3 col">
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="inputEmail3">Item name</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="inputEmail3" type="email">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="inputPassword3">Item Price</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="inputPassword3" type="password">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="inputPasswor">Item Qty </label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="inputPasswor" type="password">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="inputPassword5">Item code</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="inputPassword5" type="password">
+                    </div>
+                </div>
+
+                <div class="text-end">
+                    <button class="btn btn-dark mt-3" type="button">Delete</button>
+                    <button class="btn btn-danger mt-3" type="button">Add</button>
+                </div>
+            </form>
+        </section>
+
+
+    </section>
+
+    <section class="container-fluid mt-4">
+        <table class="table ">
+            <thead class="bg-secondary text-center">
+            <tr class="text-white">
+                <th scope="col">Item code</th>
+                <th scope="col">Item name</th>
+                <th scope="col">Item Price</th>
+                <th scope="col">Item Qty</th>
+
+            </tr>
+            </thead>
+            <tbody class="text-center">
+            <tr>
+                <td>I001</th>
+                <td>Pre-Packed Big Onions</td>
+                <td>300.00</td>
+                <td>1Kg</td>
+
+            </tr>
+            <tr>
+                <td>I002</th>
+                <td>Bitter Gourd</td>
+                <td>490.00</td>
+                <td>1Kg</td>
+            </tr>
+            <tr>
+                <td>I003</th>
+                <td>Carrot</td>
+                <td>192.00</td>
+                <td>1Kg</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+
+<script src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
