@@ -21,94 +21,174 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Mooli&display=swap" rel="stylesheet">
 
-        <style>
-            section {
-                width: 300px;
-                height: 200px;
-                /*border: 2px solid red;*/
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                position: relative;
-                right: 250px;
-                font-family: 'Inter', sans-serif;
-                font-family: 'Mooli', sans-serif;
-            }
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+            font-family: "Raleway", sans-serif;
+            font-family: "Source Code Pro", monospace;
+            font-family: 'Mooli', sans-serif;
+        }
 
-            section>div {
-                height: 50px;
-                width: 300px;
-                /*border: 2px solid green;*/
-                background-color: yellow;
-                color: darkblue;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                left: 0px;
-                right: 0px;
-                transition: all 2s;
-                position: relative;
-                box-shadow: 1px 2px 20px 2px black;
-            }
+        body {
+            background: #579BB1;
+            color: #F8F4EA;
+        }
 
-            section>div>h2,
-            p {
-                margin: 0;
-                padding: 10px;
-                font-size: 30px;
-            }
+        section {
+            min-height: 100vh;
+            padding: 10rem 9% 2rem;
+        }
 
-            section>div:hover {
-                position: relative;
-                left: 250px;
-                cursor: pointer;
-                transition: all 2s;
-            }
-        </style>
+        span {
+            color: #00FFAB;
+        }
+
+        .projects {
+            background: #579BB1;
+        }
+
+        .projects h2 {
+            margin-top: 1rem;
+            margin-bottom: 5rem;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .projects-container .projects-box {
+            position: relative;
+            border-radius: 2rem;
+            box-shadow: 0 0 3rem rgba(204, 197, 197, 0.5);
+            overflow: hidden;
+            display: flex;
+        }
+
+        .projects-box img {
+            width: 100%;
+            height: 100%;
+            transition: .5s ease;
+        }
+
+        .projects-box:hover img {
+            transform: scale(1.1);
+        }
+
+        .projects-box .projects-layer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, .1), #0fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 0 4rem;
+            transform: translateY(100%);
+            transition: .5s ease;
+        }
+
+        .projects-box:hover .projects-layer {
+            transform: translateY(0);
+
+        }
+
+        .projects-layer h4 {
+            font-size: 3rem;
+        }
+
+        .projects-layer p {
+            font-size: 2.3rem;
+            margin: 3rem 0 1rem;
+        }
+
+        .projects-layer a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 5rem;
+            height: 5rem;
+            background: #F8F4EA;
+            border-radius: 50%;
+        }
+
+        .projects-layer a i {
+            font-size: 5rem;
+            color: #579BB1;
+        }
+    </style>
+    
     </head>
 
 <body>
-    <section>
-        <div>
-            <h2>Case One</h2>
-            <p>
-                <a target="_blank" href="Assignments/CSS/Case 1/index.html"><i class='bx bx-link-alt'></i></a> 
-            </p>
-        </div>
+    <section class="projects" id="projects">
+        <h2 class="heading">C<span>SS</span></h2>
+        <div class="projects-container">
+            <div class="projects-box">
+                <img src="assets/room1.jpg" alt="">
+                <div class="projects-layer">
+                    <h4>Case One</h4>
+                    <a target="_blank" href="Assignments/CSS/Case 1/index.html"><i class='bx bx-link-alt'></i></a> 
+                </div>
+            </div>
 
-        <div>
-            <h2>Case Two</h2>
-            <p>
-                <a target="_blank" href="Assignments/CSS/Case 2/index.html"><i class='bx bx-link-alt'></i></a> 
-            </p>
-        </div>
+            <div class="projects-box">
+                <img src="assets/room1.jpg" alt="">
+                <div class="projects-layer">
+                    <h4>Case Two</h4>
+                    <a target="_blank" href="Assignments/CSS/Case 2/index.html"><i class='bx bx-link-alt'></i></a> 
 
-        <div>
-            <h2>Case Three</h2>
-            <p>
-                <a target="_blank" href="Assignments/CSS/Case 3/index.html"><i class='bx bx-link-alt'></i></a> 
-            </p>
-        </div>
+                </div>
+            </div>
 
-        <div>
-            <h2>Case Four</h2>
-            <p>
-                <a target="_blank" href="Assignments/CSS/Case 4/index.html"><i class='bx bx-link-alt'></i></a> 
-            </p>
-        </div>
+            <div class="projects-box">
+                <img src="assets/room1.jpg" alt="">
+                <div class="projects-layer">
+                    <h4>Case Three</h4>
+                    <a target="_blank" href="Assignments/CSS/Case 3/index.html"><i class='bx bx-link-alt'></i></a> 
 
-        <div>
-            <h2>Case Five</h2>
-            <p>
-                <a target="_blank" href="Assignments/CSS/Case 5/index.html"><i class='bx bx-link-alt'></i></a> 
-            </p>
-        </div>
+                </div>
+            </div>
 
-        <div>
-            <h2>Case Six</h2>
-            <p>
-                <a target="_blank" href="Assignments/CSS/Case 6/index.html"><i class='bx bx-link-alt'></i></a> 
-            </p>
+            <div class="projects-box">
+                <img src="assets/room1.jpg" alt="">
+                <div class="projects-layer">
+                    <h4>Case Four</h4>
+                    <a target="_blank" href="Assignments/CSS/Case 4/index.html"><i class='bx bx-link-alt'></i></a> 
+
+                </div>
+            </div>
+
+            <div class="projects-box">
+                <img src="assets/room1.jpg" alt="">
+                <div class="projects-layer">
+                    <h4>Case Four</h4>
+                    <a target="_blank" href="Assignments/CSS/Case 5/index.html"><i class='bx bx-link-alt'></i></a> 
+
+                </div>
+            </div>
+
+            <div class="projects-box">
+                <img src="assets/room1.jpg" alt="">
+                <div class="projects-layer">
+                    <h4>Case Four</h4>
+                    <a target="_blank" href="Assignments/CSS/Case 6/index.html"><i class='bx bx-link-alt'></i></a> 
+
+                </div>
+            </div>
         </div>
     </section>
 </body>
