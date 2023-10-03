@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item</title>
+
+    <link rel="stylesheet" href="..\css\bootstrap.css">
+</head>
+<body>
+
+    <!--Header-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow p-3 mb-5 bg-body-tertiary rounded">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">POS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse position-relative justify-content-center" id="navbarNav">
+            <ul class="navbar-nav" style="width: 40%;">
+              <li class="nav-item ml-5" style="width: 90%;">
+                <img src="..\img\home.png" alt="Logo" width="15" height="15" class="d-inline-block ">
+                <a class="nav-link d-inline-block" href="#">Home</a>
+              </li>
+              <li class="nav-item ml-2" style="margin-left: 5%; width: 90%;">
+                <img src="..\img\group.png" alt="Logo" width="15" height="15" class="d-inline-block ">
+                <a class="nav-link d-inline-block" href="..\..\index.html">Customer</a>
+              </li>
+              <li class="nav-item ml-2" style="margin-left: 5%; width: 90%">
+                <img src="..\img\packaging.png" alt="Logo" width="15" height="15" class="d-inline-block ">
+                <a class="nav-link active d-inline-block" aria-current="page"  href="item.html">Item</a>
+              </li>
+              <li class="nav-item ml-2" style="margin-left: 5%; width: 90%">
+                <img src="..\img\checklist (1).png" alt="Logo" width="15" height="15" class="d-inline-block ">
+                <a class="nav-link d-inline-block" href="order.html">Orders</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" style="width: 300px;" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success me-2" type="submit">Search</button>
+              </form>
+              <button type="button" class="btn btn-primary me-2 ">Sign Up</button>
+              <button type="button" class="btn btn-secondary ">Log Out</button>
+          </div>
+        </div>
+      </nav>
+
+      <!--Main Div-->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="row">
+                <div class="col-3 align-self-start fs-4">
+                    <img src="..\img\packaging.png" style="width: 15%;" alt="">
+                  Items
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 ">
+                <div style="border: 2px solid rgb(197, 197, 197); ">
+                    <div class="container-fluid bg-success">
+                        <div class="col-3 align-self-start fs-4" style="font-weight: bold; color: white;">
+                            Item
+                        </div>
+                    </div>
+                    <form class="row g-3 mt-4">
+                        <div class="col-md-9" style="margin-left: 3%;">
+                          <input type="email" placeholder="Input Item Name/Code Here" class="form-control" id="inputEmail4">
+                        </div>
+                
+                        <div class="col-md-4" style="margin-left: 3%;">
+                          <select id="inputState" class="form-select">
+                            <option selected>Name</option>
+                            <option>NIC</option>
+                          </select>
+                        </div>
+                        <div class="col-10" style="margin-left: 3%; margin-bottom: 3%;">
+                          <button type="submit" class="btn btn-primary" style="position: relative; margin-right: 84%;">Search</button>
+                        </div>
+                      </form>
+                </div>
+                
+            </div>
+            <div class="col-6 ">
+                <div class="col-6" style="margin-left: 52%;">
+                    <button type="button" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 45%;">New Item</button>
+                    <button type="button" class="btn btn-success" style="width: 45%;">View All</button>
+                </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-right: 32%; margin-top: 5%;">
+              <button type="button" class="btn btn-danger">Delete</button>
+              <button type="button" class="btn btn-warning">Update</button>
+              <button type="button" class="btn btn-info">Details</Details></button>
+              <button type="button" class="btn btn-success">Clear</button>
+            </div>
+            <div style=" height: 240px; ">
+                <table class="table table-bordered border" style="margin-top: 5%;">
+                    <thead>
+                      <tr style="border-color: green;">
+                        <th scope="col">Item Code</th>
+                        <th scope="col">Item Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>I001</td>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>I002</td>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>I003</td>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                  </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--ADD New Form-->
+
+    <div class="modal fade" tabindex="-1" id="staticBackdrop" data-bs-backdrop="static">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add Item</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex justify-content-center">
+              <form class="w-75">
+                  <div class="mb-3">
+                      <label for="cusId" class="form-label">Item Code</label>
+                      <input type="text" class="form-control" id="itemCode">
+                  </div>
+                  <div class="mb-3">
+                      <label for="cusName" class="form-label">Item Name</label>
+                      <input type="text" class="form-control" id="itemName">
+                  </div>
+                  <div class="mb-3">
+                      <label for="cusAddress" class="form-label">Item Price</label>
+                      <input type="text" class="form-control" id="itemPrices">
+                  </div>
+                  <div class="mb-3">
+                      <label for="cusSalary" class="form-label">Item Quantity</label>
+                      <input type="text" class="form-control" id="itemQuantity">
+                  </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-keyboard="false">Close</button>
+            <button type="button" class="btn btn-success">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="..\js\bootstrap.js"></script>
+</body>
+</html>

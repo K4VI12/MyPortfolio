@@ -1,95 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <title>Document</title>
+
     <style>
-        body {
-            position: relative;
-            background-color: #0fe;
-            height: 100vh;
-        }
-
-
-        body>div:first-child {
+        section{
             position: absolute;
-            width: 15%;
-            height: 20%;
-            top: 50%;
-            left: 20%;
+            border: 2px solid rgb(255, 21, 21);
+            left: 0%;
+            right: 0%;
+            top: 0%;
+            bottom: 0%;
+            margin: auto;
+            width: 80%;
+            display: flex;
+            height: 39%;
         }
 
-        body>div:nth-child(2) {
-            position: absolute;
-            width: 15%;
-            height: 20%;
-            top: 50%;
-            left: 35%;
+        section>div{
+            width: calc(100%/5);
+            height: 100px;
+            border: 2px solid black;
         }
 
-        body>div:nth-child(3) {
-            position: absolute;
-            width: 15%;
-            height: 20%;
-            top: 50%;
-            left: 50%;
+        section>div:nth-child(2),div:nth-child(3),div:nth-child(4){
+            align-self: center;
         }
 
-        body>div:nth-child(4) {
-            position: absolute;
-            width: 15%;
-            height: 20%;
-            top: 70%;
-            left: 65%;
+        section>div:nth-child(5){
+            background-color: blue;
+            align-self: flex-end;
         }
 
-
-        body>div:nth-child(5) {
-            position: absolute;
-            width: 15%;
-            height: 20%;
-            top: 30%;
-            left: 5%;
-        }
     </style>
-
-
 </head>
-
 <body>
+    
+    <section>
+        <div class ="div"></div>
+        <div class ="div"></div>
+        <div class ="div" ></div>
+        <div class ="div"></div>
+        <div class ="div"></div>
+    </section>
 
-    <div id="firstDiv"></div>
-    <div id="secondDiv"></div>
-    <div id="threeDiv"></div>
-    <div id="forthdiv"></div>
-    <div id="fiveDiv"></div>
 
     <script>
 
-        let colours = ["yellow", "red", "white", "orange", "blue"];
-        let all = document.querySelectorAll("div");
+        let array = new Array('red','green','blue','white','purple');
+        let div = document.querySelectorAll('div');
 
+        function pattern(){
+            for(let i in array){ 
+                div[i].style.backgroundColor = (array[i]);
+             }
 
-        setInterval(
-            function () {
-                var lastCol = colours.pop();
-                colours.unshift(lastCol);
-
-                for (let i in colours) {
-
-                    all[i].style.background = colours[i];
-
-                }
-            }, 500
-        )
+             array.unshift(array[4]);
+             array.pop();
+        }
 
 
 
-
+        setInterval(function(){
+            pattern(); 
+        },1000);
 
     </script>
 
 </body>
-
 </html>

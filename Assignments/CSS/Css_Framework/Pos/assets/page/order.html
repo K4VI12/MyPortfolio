@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+
+    <link rel="stylesheet" href="..\css\bootstrap.css">
+</head>
+<body>
+
+    <!--Header-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow p-3 mb-5 bg-body-tertiary rounded">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">POS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse position-relative justify-content-center" id="navbarNav">
+            <ul class="navbar-nav" style="width: 40%;">
+              <li class="nav-item ml-5" style="width: 90%;">
+                <img src="..\img\home.png" alt="Logo" width="15" height="15" class="d-inline-block ">
+                <a class="nav-link d-inline-block" href="#">Home</a>
+              </li>
+              <li class="nav-item ml-2" style="margin-left: 5%; width: 90%;">
+                <img src="..\img\group.png" alt="Logo" width="15" height="15" class="d-inline-block ">
+                <a class="nav-link d-inline-block" href="..\..\index.html">Customer</a>
+              </li>
+              <li class="nav-item ml-2" style="margin-left: 5%; width: 90%">
+                <img src="..\img\packaging.png" alt="Logo" width="15" height="15" class="d-inline-block ">
+                <a class="nav-link d-inline-block" aria-current="page"  href="item.html">Item</a>
+              </li>
+              <li class="nav-item ml-2" style="margin-left: 5%; width: 90%">
+                <img src="..\img\checklist (1).png" alt="Logo" width="15" height="15" class="d-inline-block ">
+                <a class="nav-link active d-inline-block" href="order.html">Orders</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" style="width: 300px;" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success me-2" type="submit">Search</button>
+              </form>
+              <button type="button" class="btn btn-primary me-2 ">Sign Up</button>
+              <button type="button" class="btn btn-secondary ">Log Out</button>
+          </div>
+        </div>
+      </nav>
+
+      <!--Main Div-->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="row">
+                <div class="col-3 align-self-start fs-4">
+                    <img src="..\img\checklist (1).png" style="width: 15%;" alt="">
+                  Order
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 ">
+                <div class="col-12 border border-2">
+                    <div class="col-12 bg-success fs-5" style="font-weight: bold; height: 35px; color: white;">Invoice Details</div>
+                    <div class="col-11 " style="margin: 3%;">
+                        <form>
+                            <div class="mb-3 d-flex flex-row">
+                              <div style="width: 45%;">
+                                <label for="exampleInputEmail1" class="form-label">Order ID : </label>
+                                <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              </div>
+                              <div class="col-5" style="margin-left: 10%; width: 45%;">
+                                <label for="exampleInputEmail1" class="form-label">Date : </label>
+                                <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                              </div>
+                            </div>
+                            <div class="mb-3 d-flex flex-row">
+                                <div style="width: 45%;">
+                                  <label for="exampleInputEmail1" class="form-label">Customer : </label>
+                                  <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div class="col-5" style="margin-left: 10%; width: 45%;">
+                                  <label for="exampleInputEmail1" class="form-label">Customer ID : </label>
+                                  <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                </div>
+                            </div>
+                            <div class="mb-3 d-flex flex-row">
+                                <div style="width: 45%;">
+                                  <label for="exampleInputEmail1" class="form-label">Name : </label>
+                                  <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div class="col-5" style="margin-left: 10%; width: 45%;">
+                                  <label for="exampleInputEmail1" class="form-label">Salary : </label>
+                                  <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                </div>
+                              </div>
+                            <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Address :</label>
+                              <input type="" class="form-control" id="exampleInputPassword1">
+                            </div>
+                          </form>
+                    </div>
+                </div>
+            </div>
+
+            <!--Second Fill Form-->
+
+            <div class="col-6 ">
+                <div class="col-12 border border-2" style="height: 100%;">
+                    <div class="col-12 bg-success fs-5" style="font-weight: bold; height: 35px; color: white;">Item Select</div>
+                    <div class="col-11 " style="margin: 3%;">
+                        <form>
+                            <div class="mb-3 d-flex flex-row">
+                              <div class="col-6">
+                                <label for="exampleInputEmail1" class="form-label">Item : </label>
+                                <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              </div>
+                              <div style="margin-left: 5%; width: 50%;">
+                                <label for="exampleInputEmail1" class="form-label">Item Code : </label>
+                                <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                              </div>
+                            </div>
+                            <div class="mb-3 d-flex flex-row">
+                                <div class="col-5">
+                                  <label for="exampleInputEmail1" class="form-label">Item Name : </label>
+                                  <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div style="margin-left: 5%;">
+                                  <label for="exampleInputEmail1" class="form-label">Price : </label>
+                                  <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                </div>
+                                <div style="margin-left: 5%;">
+                                    <label for="exampleInputEmail1" class="form-label">Qty OnHa : </label>
+                                    <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                  </div>
+                              </div>
+                            <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Order Quantity :</label>
+                              <input type="" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <button type="submit" class="btn btn-warning" style="position: relative; margin-left: 83%;">Add Item</button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+
+          <!--Table Div-->
+
+          <div class="col">
+            <div style=" height: 240px; ">
+                <table class="table table-bordered border" style="margin-top: 5%;">
+                    <thead>
+                      <tr style="border-color: green;">
+                        <th scope="col">Item Code</th>
+                        <th scope="col">Item Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>I001</td>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>I002</td>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>I003</td>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                  </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="..\js\bootstrap.js"></script>
+</body>
+</html>
