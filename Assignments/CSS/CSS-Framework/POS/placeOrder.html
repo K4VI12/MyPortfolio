@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <title>Order</title>
+</head>
+<body>
+<header>
+    <section class="container-fluid">
+        <nav class="navbar navbar-light bg-dark bg-opacity-50 row">
+            <div class="container-fluid col">
+                <a class="navbar-brand text-danger fw-bold " href="index.html">
+                    FRESHMARKET POS SYSTEM
+                </a>
+            </div>
+        </nav>
+    </section>
+    <section class="text-center  bg-success">
+        <nav class="nav justify-content-center">
+            <a aria-current="page" class="nav-link link-light" href="index.html">HOME</a>
+                <a class="nav-link link-light" href="customers.html ">CUSTOMERS</a>
+            <a class="nav-link link-light" href="items.html">ITEMS</a>
+            <div class="p text-primary-emphasis bg-warning border border-danger rounded-2">
+                <a class="nav-link link-light" href="placeOrder.html">PLACE ORDER</a> </div>
+        </nav>
+    </section>
+</header>
+
+<main class="container">
+
+    <!--fields-->
+    <section class="row">
+        <!--invoice details-->
+        <section class="col-6 col-md">
+            <!--add customer form start-->
+
+            <h5 class="text-light bg-danger mb-3 mt-2" >Invoice Details</h5>
+
+            <div class="row">
+                <div class="mb-2">
+                    <label for="exampleFormControlInput1" class="form-label">Order ID</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="orderid">
+                </div>
+                <div class="mb-2">
+                    <label for="exampleFormControlInput1" class="form-label">Date</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="date">
+                </div>
+            </div>
+
+            <div class=" mb-2">
+                <label for="exampleFormControlInput1" class="form-label">Customer ID</label>
+                <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="CustomerID">
+            </div>
+
+            <div class=" mb-2">
+                <label for="exampleFormControlInput1" class="form-label">Customer Name</label>
+                <input type="text" class="form-control" id="exampleFormControlInput4" placeholder="CustomerName">
+            </div>
+            <div class=" mb-2">
+                <label for="exampleFormControlInput1" class="form-label">Salary</label>
+                <input type="text" class="form-control" id="exampleFormControlInput5" placeholder="enter">
+            </div>
+
+            <div class=" mb-2">
+                <label for="exampleFormControlInput1" class="form-label">Customer Address</label>
+                <input type="text" class="form-control" id="exampleFormControlInput6" placeholder="enter">
+            </div>
+            <!--add customer form end-->
+
+        </section>
+        <!--item select-->
+        <section class="col-6 col-md">
+            <!--add customer form start-->
+<br>
+            <h5 class="text-light bg-danger" >Items Select</h5>
+
+            <div class="row">
+
+                <div class=" mb-2">
+                    <label for="exampleFormControlInput1" class="form-label">Item Code</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput7" placeholder="enter">
+                </div>
+                <div class=" mb-2">
+                    <label for="exampleFormControlInput1" class="form-label">Item Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput10" placeholder="enter">
+                </div>
+
+            </div>
+
+            <div class="mb-2">
+            <label for="exampleFormControlInput1" class="form-label">Unit Price</label>
+            <input type="text" class="form-control" id="exampleFormControlInput9" placeholder="enter">
+            </div>
+            <div class=" mb-2">
+                <label for="exampleFormControlInput1" class="form-label">Qty On Hand</label>
+                <input type="text" class="form-control" id="exampleFormControlInput11" placeholder="enter">
+            </div>
+            <div class=" mb-2">
+                <label for="exampleFormControlInput1" class="form-label">Order Qty</label>
+                <input type="text" class="form-control" id="exampleFormControlInput12" placeholder="enter">
+            </div>
+
+
+            <!--add customer form end-->
+
+            <!--btn add item-->
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-outline-primary" type="button">Add Item</button>
+            </div>
+        </section>
+        <!--purchase form-->
+        <section class=" col">
+            <!--add customer form start-->
+<br>
+            <h5 class="text-light bg-danger" >Sub Total : RS 400.00</h5>
+
+            <div class="row">
+                <div class="form-floating mb-2 col">
+                    <label class="text-light ms-2" for="discount">Discount(RS) </label>
+                    <input type="text" class="form-control bg-dark text-light" id="discount"  placeholder="name@example.com">
+
+                </div>
+                <div class="form-floating mb-2 col">
+                    <label class="text-light ms-2" for="cash">Cash</label>
+                    <input type="text" class="form-control bg-dark text-light" id="cash"  placeholder="name@example.com">
+
+                </div>
+            </div>
+
+            <h5 class="text-light text-bg-success" >Total : RS 560.00</h5>
+            <h6 class="text-light bg-info" >Balance : RS 7520.00</h6>
+            <!--add customer form end-->
+
+            <!--purchase button-->
+            <div class="d-grid gap-2 mt-2">
+                <button class="btn btn-outline-success" type="button">Purchase</button>
+            </div>
+
+        </section>
+    </section>
+
+    <!-- table  -->
+    <section class="container-fluid mt-4">
+        <table class="table ">
+            <thead class="bg-secondary text-center">
+            <tr class="text-white">
+                <th scope="col">Item code</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Unit Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+
+            </tr>
+            </thead>
+            <tbody class="text-center">
+            <tr>
+                <td>I001</th>
+                <td>Pre-Packed Big Onions</td>
+                <td>300.00</td>
+                <td>1Kg</td>
+                <td>1400</td>
+
+            </tr>
+            <tr>
+                <td>I002</th>
+                <td>Bitter Gourd</td>
+                <td>490.00</td>
+                <td>1Kg</td>
+                <td>2400</td>
+            </tr>
+            <tr>
+                <td>I003</th>
+                <td>Carrot</td>
+                <td>192.00</td>
+                <td>1Kg</td>
+                <td>870</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!--edit & remove btn-->
+    <button type="button" class="btn btn-danger m-1" data-bs-toggle="modal" data-bs-target="#edit">Edit Quantity</button>
+    <button type="button" class="btn btn-warning m-1" data-bs-toggle="modal" data-bs-target="#remove">Remove Item</button>
+    <!--table end-->
+
+
+</main>
+
+
+
+<script src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

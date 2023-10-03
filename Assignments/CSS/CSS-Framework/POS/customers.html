@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Customer</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+</head>
+<body>
+<header>
+    <section class="container-fluid">
+        <nav class="navbar navbar-light bg-dark bg-opacity-50 row">
+            <div class="container-fluid col">
+                <a class="navbar-brand text-danger fw-bold " href="index.html">
+                    FRESHMARKET POS SYSTEM
+                </a>
+            </div>
+        </nav>
+    </section>
+    <section class="text-center  bg-success">
+        <nav class="nav justify-content-center">
+            <a aria-current="page" class="nav-link link-light" href="index.html">HOME</a>
+            <div class="p text-primary-emphasis bg-warning border border-danger rounded-2">
+                <a class="nav-link link-light" href="customers.html ">CUSTOMERS</a>  </div>
+            <a class="nav-link link-light" href="items.html">ITEMS</a>
+            <a class="nav-link link-light" href="placeOrder.html">PLACE ORDER</a>
+        </nav>
+    </section>
+</header>
+<br><br>
+<main class="container-fluid">
+    <form class="col-4 bg-light"  >
+        <section class="text-center  bg-danger">
+            <nav class="nav justify-content-around">
+                <a aria-current="page" class="nav-link link-light">Customer Search</a>
+            </nav>
+        </section><br>
+        <input type="text" class="form-control" placeholder="First name" aria-label="Input Name/NIC/Tp Here">
+
+        <br>
+
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-2">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+                <div class="col-4">
+                    <div class="col-8">
+                        <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                        <select class="form-select" id="inlineFormSelectPref">
+                            <option value="1">Name</option>
+                            <option value="2">NIC</option>
+                            <option value="3">Tp</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-end">
+            <button class="btn btn-danger mt-3" type="button">Delete</button>
+            <button class="btn btn-success mt-3" type="button">Clear</button>
+        </div>
+    </form>
+
+
+    <div class="container-fluid">
+
+        <div class= "row justify-content-end">
+
+            <div class="col col-lg-2">
+                <button type="submit" class="btn btn-primary" >New Customer</button>
+            </div>
+            <div class="col col-lg-2">
+                <button type="submit" class="btn btn-primary">View All Customer</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <section class="mt-4">
+        <table class="table ">
+            <thead class="bg-secondary">
+            <tr class="text-white text-center">
+                <th scope="col">Customer ID</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Customer Address</th>
+                <th scope="col">Tel No</th>
+
+            </tr>
+            </thead>
+            <tbody class="text-center">
+            <tr>
+                <td>C001</th>
+                <td>hanska</td>
+                <td>Galle</td>
+                <td>071-46679744</td>
+
+            </tr>
+            <tr>
+                <td>C002</th>
+                <td>kamal</td>
+                <td>negombo</td>
+                <td>077-1313797</td>
+            </tr>
+            <tr>
+                <td>C003</th>
+                <td>kavindu</td>
+                <td>Galle</td>
+                <td>077-7797974</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+</main>
+
+
+
+
+<script src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

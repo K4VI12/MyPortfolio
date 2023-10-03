@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            position: relative;
+            background-color: #0fe;
+            height: 100vh;
+        }
+
+
+        body>div:first-child {
+            position: absolute;
+            width: 15%;
+            height: 20%;
+            top: 50%;
+            left: 20%;
+        }
+
+        body>div:nth-child(2) {
+            position: absolute;
+            width: 15%;
+            height: 20%;
+            top: 50%;
+            left: 35%;
+        }
+
+        body>div:nth-child(3) {
+            position: absolute;
+            width: 15%;
+            height: 20%;
+            top: 50%;
+            left: 50%;
+        }
+
+        body>div:nth-child(4) {
+            position: absolute;
+            width: 15%;
+            height: 20%;
+            top: 70%;
+            left: 65%;
+        }
+
+
+        body>div:nth-child(5) {
+            position: absolute;
+            width: 15%;
+            height: 20%;
+            top: 30%;
+            left: 5%;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div id="firstDiv"></div>
+    <div id="secondDiv"></div>
+    <div id="threeDiv"></div>
+    <div id="forthdiv"></div>
+    <div id="fiveDiv"></div>
+
+    <script>
+
+        let colours = ["yellow", "red", "white", "orange", "blue"];
+        let all = document.querySelectorAll("div");
+
+
+        setInterval(
+            function () {
+                var lastCol = colours.pop();
+                colours.unshift(lastCol);
+
+                for (let i in colours) {
+
+                    all[i].style.background = colours[i];
+
+                }
+            }, 500
+        )
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
