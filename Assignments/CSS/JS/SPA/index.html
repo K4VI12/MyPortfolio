@@ -101,23 +101,23 @@
                 <table class="table table-bordered border" style="margin-top: 5%;">
                     <thead>
                       <tr style="border-color: green;">
-                        <th scope="col">ID</th>
+                        <th scope="col">Customer ID</th>
                         <th scope="col">Customer Name</th>
-                        <th scope="col">TP</th>
+                        <th scope="col">Telephone</th>
                         <th scope="col">Salary</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>C001</td>
-                        <th scope="row">Kasun</th>
-                        <td>+94 76 2656 420</td>
+                        <th scope="row">Chamara</th>
+                        <td>0767140648</td>
                         <td>8000 00</td>
                       </tr>
                       <tr>
                         <td>C002</td>
-                        <th scope="row">Sadun</th>
-                        <td>+94 76 2656 420</td>
+                        <th scope="row">Nimesh</th>
+                        <td>0766064938</td>
                         <td>100 000</td>
                       </tr>
                       <tr>
@@ -142,7 +142,8 @@
           </div>
           <div class="modal-body">
             <div class="d-flex justify-content-center">
-              <form class="w-75">
+              <form id="customerForm" class="w-75">
+
                   <div class="mb-3">
                       <label for="cusId" class="form-label">Customer ID</label>
                       <input type="text" class="form-control" id="cusId">
@@ -164,7 +165,8 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-keyboard="false">Close</button>
-            <button type="button" class="btn btn-success">Save</button>
+            <button type="button" class="btn btn-success" onclick="saveCustomer()">Save</button>
+
           </div>
         </div>
       </div>
@@ -497,6 +499,8 @@
                 cuspagebtn.classList.remove("active");
             }
         });
+
+      
 
     </script>
 </body>
