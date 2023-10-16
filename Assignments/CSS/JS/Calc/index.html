@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="assets\css\bootstrap.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&family=Concert+One&family=Dongle:wght@700&family=Exo+2:wght@600&family=Inter&family=Roboto+Mono&family=Rubik&family=Sora:wght@600&family=Source+Code+Pro:wght@800&family=Staatliches&display=swap" rel="stylesheet">
+    <style>
+
+        body{
+            background: url('assets/img/mesh-757.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        /*Main section*/
+        section{
+            width: 30%;
+            height: 80%;
+            top: 0%;
+            left: 0%;
+            right: 0%;
+            bottom: 0%;
+            margin: auto;
+        }
+
+        /*Display*/
+        section>div>div:nth-child(1){
+            height: 30%;
+        }
+
+        /*Row*/
+       section>div>div:nth-child(2),section>div>div:nth-child(3),section>div>div:nth-child(4),section>div>div:nth-child(5){
+            position: relative;
+            width: 100%;
+            height: calc(70%/4);
+            margin-left: 0%;
+        }
+
+        /*Col*/
+        .col:nth-child(1),.col:nth-child(2),.col:nth-child(3){
+            position: relative;
+            width: fit-content;
+        }
+
+        /*All Button*/
+        button{
+            width: 90%;
+            height: 70%;
+            position: relative;
+            left: 0%;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: rgb(194, 189, 189);
+        }
+
+        .livenumber{
+            background-color: white;
+            position: absolute;
+            width: 93%;
+            height: 90%;
+            border: 2px solid black;
+            top: 0%;
+            bottom: 0%;
+            left: 0%;
+            right: 0%;
+            margin: auto;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <!--Main Section-->
+    <section class="rounded-5 border border-3 border-black position-absolute" style="background-color: white;">
+        <!--Main Section For Calculator-->
+        <div class="w-100 h-100 position-relative">
+            <!-- Display -->
+            <div class="w-100 position-relative top-0 border-bottom border-2 border-dark">
+                <div class="livenumber">
+                    <button id="clearbtn" style="width: 50px; height: 50px; border-radius: 100%; left: 2%; top: 3%; border: white;">
+                        <h3>C</h3>
+                    </button>
+                    <h1 id="numbermaindisplay" style="position: absolute; right: 5%; bottom: 0%;">0</h1>
+                    <h2 id="numberseconddisplay" style="position: absolute; right: 5%;">0</h2>
+                </div>
+            </div>
+
+            <!-- First row -->
+            <div class="row mt-3">
+                <div class="col">
+                    <button id="sevenbtn">
+                        <h2>7</h2>
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="eightbtn">
+                        <h2>8</h2>
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="ninebtn">
+                        <h2>9</h2>
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="plusbtn">
+                        <h2>+</h2>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="row">
+                <div class="col">
+                    <button id="fourbtn">
+                        <h2>4</h2>
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="fivebtn">
+                        <h2>5</h2>
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="sixbtn">
+                        <h2>6</h2>
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="minusbtn">
+                        <h2>-</h2>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Third Row -->
+            <div class="row">
+                <div class="col">
+                    <button id="onebtn">
+                        <h2>1</h2>
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="secondbtn">
+                        <h2>2</h2>
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="threebtn">
+                        <h2>3</h2>
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="dividebtn">
+                        <h2>/</h2>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Forth Row -->
+            <div class="row">
+                <div class="col">
+                    <button id="serobtn">
+                        <h2>0</h2>
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="decimalbtn">
+                        <h2>.</h2>
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="equalbtn">
+                        <h2>=</h2>
+                    </button>
+                </div>
+                <div class="col">
+                    <button id="multiplicationbtn">
+                        <h2>*</h2>
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="loginpage" style="background-color: white; position: relative; width: 100%; height: 100vh; left: 0%;">
+        <hgroup style="font-family: 'Concert One', cursive; position: absolute; top: 5%; left: 15%; left: 7%;">
+            <h1 style="font-size: 55px;">Welcome to our site</h1>
+            <h1 style="color: #FF782A; font-size: 40px;">School Calculator</h1>
+            <h1 style="color: #FF782A; font-size: 40px;">Company Website</h1>
+        </hgroup>
+        <p style="font-size: 20px; position: absolute; top: 45%; left: 7%;">
+            Introducing our user-friendly online calculator designed to empower <br> 
+            students with quick and efficient mathematical solutions. <br>
+            Our sleek and intuitive interface provides a seamless experience,allowing<br>
+            students to effortlessly perform arithmetic, algebraic, and scientific calculations.<br>
+            Whether you're tackling complex equations or simply need to verify your math homework,<br>
+            our calculator is your trusted companion. With a wide range of functions<br>
+            and an easy-to-navigate layout, math has never been more accessible.<br> 
+            Enhance your learning journey with our online calculator and simplify <br> 
+            your mathematical challenges today.
+        </p>
+        <aside style="position: absolute; right: 0%; top: 25%;">
+            <img style="width: 80%;" src="assets/img/calcsit.gif" alt="">
+        </aside>
+
+        <button id="getstartedbtn" style="width: 20%; height: 5%; position: absolute; top: 85%; left: 7%;" type="button" class="btn btn-outline-success">Get Started</button>
+    </section>
+    
+    <script src="assets\js\bootstrap.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <script>
+        //Clear Button In Display
+        const clearbtn = $('#clearbtn');
+        //Number Button
+        const seven = $('#sevenbtn');
+        const eight = $('#eightbtn');
+        const nine = $('#ninebtn');
+
+        const four = $('#fourbtn');
+        const five = $('#fivebtn');
+        const six = $('#sixbtn');
+
+        const one = $('#onebtn');
+        const second = $('#secondbtn');
+        const three = $('#threebtn');
+
+        const sero = $('#serobtn');
+        
+        //Arithmatic Button
+        const plusbtn = $('#plusbtn');
+        const minusbtn = $('#minusbtn');
+        const dividebtn = $('#dividebtn');
+        const decimalbtn = $('#decimalbtn');
+        const equalbtn = $('#equalbtn');
+        const multiplicationbtn = $('#multiplicationbtn');
+
+        const display1 = $('#numbermaindisplay');
+        const display2 = $('#numberseconddisplay');
+
+        const getstartedbtn = $('#getstartedbtn');
+
+        //For Store Display All Number
+        const AllnumberArr = new Array();
+
+        //For Store Display All Arithmatic
+        const Allarithmatic = new Array();
+
+        clearbtn.click(function(){
+            setbtnAnima(clearbtn);
+
+            display1.text('0');
+            display2.text('0');
+        });
+
+        //Number Button
+        seven.click(function(){
+            setbtnAnima(seven);
+
+            clearDisplay();
+            display1.text(display1.text()+`${'7'}`);
+        });
+
+        eight.click(function(){
+            setbtnAnima(eight);
+
+            clearDisplay();
+            display1.text(display1.text()+`${'8'}`);
+        });
+
+        nine.click(function(){
+            setbtnAnima(nine);
+
+            clearDisplay();
+            display1.text(display1.text()+`${'9'}`);
+        });
+
+        four.click(function(){
+            setbtnAnima(four);
+
+            clearDisplay();
+            display1.text(display1.text()+`${'4'}`);
+        });
+
+        five.click(function(){
+            setbtnAnima(five);
+
+            clearDisplay();
+            display1.text(display1.text()+`${'5'}`);
+        });
+
+        six.click(function(){
+            setbtnAnima(six);
+
+            clearDisplay();
+            display1.text(display1.text()+`${'6'}`);
+        })
+
+        one.click(function(){
+            setbtnAnima(one);
+
+            clearDisplay();
+            display1.text(display1.text()+`${'1'}`);
+        });
+
+        second.click(function(){
+            setbtnAnima(second);
+
+            clearDisplay();
+            display1.text(display1.text()+`${'2'}`);
+        });
+
+        three.click(function(){
+            setbtnAnima(three);
+
+            clearDisplay();
+            display1.text(display1.text()+`${'3'}`);
+        });
+
+        sero.click(function(){
+            setbtnAnima(sero);
+
+            clearDisplay();
+            display1.text(display1.text()+`${'0'}`);
+        })
+
+        //Arithmatic Button Action**********************************
+        plusbtn.click(function(){
+            setbtnAnima(plusbtn);
+
+            if(checkLastCharacter()){
+                display1.text(display1.text()+`${'+'}`);
+            }else{
+                const newtext = removeLastCharacter();
+                display1.text(newtext+`${'+'}`);
+            }
+            Allarithmatic.push("+");
+            console.log(Allarithmatic);
+
+            getNumber();
+        });
+
+        minusbtn.click(function(){
+            setbtnAnima(minusbtn);
+
+            if(checkLastCharacter()){
+                display1.text(display1.text()+`${'-'}`);
+            }else{
+                const newtext = removeLastCharacter();
+                display1.text(newtext+`${'-'}`);
+            }
+            Allarithmatic.push("-");
+            console.log(Allarithmatic);
+
+            getNumber();
+        });
+
+
+        dividebtn.click(function(){
+            setbtnAnima(dividebtn);
+
+            if(checkLastCharacter()){
+                display1.text(display1.text()+`${'/'}`);
+            }else{
+                const newtext = removeLastCharacter();
+                display1.text(newtext+`${'/'}`);
+            }
+            Allarithmatic.push("/");
+            console.log(Allarithmatic);
+
+            getNumber();
+        });
+
+        decimalbtn.click(function(){
+            setbtnAnima(decimalbtn);
+
+            if(checkLastCharacter()){
+                display1.text(display1.text()+`${'.'}`);
+            }else{
+                const newtext = removeLastCharacter();
+                display1.text(newtext+`${'.'}`);
+            }
+        });
+
+        equalbtn.click(function(){
+            setbtnAnima(equalbtn);
+            
+            if(checkLastCharacter()){
+                getNumber();
+            }else{
+                AllnumberArr.push(0);
+            }
+            getAnswer();
+        });
+
+        multiplicationbtn.click(function(){
+            setbtnAnima(multiplicationbtn);
+
+            if(checkLastCharacter()){
+                display1.text(display1.text()+`${'*'}`);
+            }else{
+                const newtext = removeLastCharacter();
+                display1.text(newtext+`${'*'}`);
+            }
+            Allarithmatic.push("*");
+            console.log(Allarithmatic);
+
+            getNumber();
+        });
+
+        //This Function Cretae For Set Animation When Click the Button
+        function setbtnAnima(btn){
+            btn.css({
+                'background-color' : '#FF782A',
+                'color' : 'white',
+                'border' : 'none'
+            });
+            setTimeout(function(){
+               btn.css({
+                'background-color':'rgb(194, 189, 189)',
+                'color' :'black',
+               });
+               
+               if(btn!=clearbtn){
+                btn.css({
+                    'border' : '2px solid black'
+                });
+               }
+            },200);
+        }
+
+        //This Function For When Start the Type Number , Clear Display
+        function clearDisplay(){
+            if(display1.text()==="0"){
+                display1.text('');
+            }
+        }
+
+        //This Function For When Click the Some Arithmatic Button ,Check Alredy type or not Some Arithmatic Button
+        function checkLastCharacter(){
+            const text = display1.text();
+            const ArithmaticArr = new Array('+','-','/','*','.');
+            let valide;
+
+            const lastCharacter = text[text.length - 1];
+            console.log(lastCharacter);
+            
+            count:for(Ar in ArithmaticArr){
+                if(ArithmaticArr[Ar]===lastCharacter){
+                    valide = false;
+                    break count;
+                }else{
+                    valide = true;
+                }
+            }
+
+            return valide;
+        }
+
+        /*This Function For , If Alredy TYPE Some Arithmatic Option And when Click Again Arithmatic Buttons , 
+        For Remove the First Arithmatic Option */
+        function removeLastCharacter(){
+            const text = display1.text();
+            const newText = text.slice(0, -1);
+            
+            AllnumberArr.pop();
+            Allarithmatic.pop();
+
+            return newText;
+        }
+
+        //This Function For When Click Some Arithmatic Button Or Equal Button , Get Last Number and It Add For Array
+        function getNumber(){
+            const displaynum = display1.text();
+            const tokens = displaynum.split(/[-+*/]/);
+
+            // Remove any empty strings from the array
+            const filteredTokens = tokens.filter(token => token !== "");
+
+            if (filteredTokens.length > 0) {
+                // Get the last token, which should be the last number
+                const lastToken = filteredTokens[filteredTokens.length - 1];
+                AllnumberArr.push(lastToken);
+            }
+
+            console.log(AllnumberArr);
+
+        }
+
+        //This Function For After Click the Equal Button , Calculate And Get Finall Anwer .
+        function getAnswer(){
+            let operator = '-';
+            let answer;
+            let boolean = true;
+
+            if(Allarithmatic[0]==='+'){
+                answer = parseFloat(AllnumberArr[0]) + parseFloat(AllnumberArr[1]);
+            }else if(Allarithmatic[0]==='-'){
+                answer = parseFloat(AllnumberArr[0]) - parseFloat(AllnumberArr[1]);
+            }else if(Allarithmatic[0]==='*'){
+                answer = parseFloat(AllnumberArr[0]) * parseFloat(AllnumberArr[1]);
+            }else if(Allarithmatic[0]==='/'){
+                answer = parseFloat(AllnumberArr[0]) / parseFloat(AllnumberArr[1]);
+            }
+
+            AllnumberArr.shift();
+            AllnumberArr.shift();
+            Allarithmatic.shift();
+
+            console.log(AllnumberArr.length);
+            while(boolean){
+                if(AllnumberArr.length>=1){
+                    if(Allarithmatic[0]==='+'){
+                        answer = parseFloat(answer) + parseFloat(AllnumberArr[0]);
+                    }else if(Allarithmatic[0]==='-'){
+                        answer = parseFloat(answer) - parseFloat(AllnumberArr[0]);
+                    }else if(Allarithmatic[0]==='*'){
+                        answer = parseFloat(answer) * parseFloat(AllnumberArr[0]);
+                    }else if(Allarithmatic[0]==='/'){
+                        answer = parseFloat(answer) / parseFloat(AllnumberArr[0]);
+                    }
+                    
+                    AllnumberArr.shift();
+                    Allarithmatic.shift();
+
+                }else{
+                    boolean = false;
+                    console.log(answer);
+                    SetAnwerWithClearDisplay(answer);
+                    return answer;
+                }
+            }
+        }
+
+        //This Function For , After Click Equal Button and Get The Finall Answer , It Set For The Display 
+        function SetAnwerWithClearDisplay(finalanswer){
+            display2.text(display1.text());
+
+            display1.text(finalanswer);
+        }
+
+        getstartedbtn.click(function(){
+            const loginpage = $('#loginpage');
+
+            loginpage.css('display','none');
+        });
+    </script>
+</body>
+</html>

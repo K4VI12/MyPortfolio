@@ -47,7 +47,7 @@
 
       <!--Customer Page *************************************************************************************************-->
       <!--Main Div-->
-      <div class="container" id="customerpage">
+      <div class="container" id="customerpage" style="position: relative;">
         <div class="row">
           <div class="col-12">
             <div class="row">
@@ -57,9 +57,9 @@
                 </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-6 ">
-                <div style="border: 2px solid rgb(197, 197, 197); ">
+          <div class="row" style="position: relative; height: 400px; border-radius: 15px; background-color: rgb(239, 239, 239); border: 2px solid gray;">
+            <div class="col-6">
+                <div style="border: 2px solid rgb(197, 197, 197); position: absolute; bottom: 0%; top: 0%; margin: auto; width: 45%; height: 70%;">
                     <div class="container-fluid bg-success">
                         <div class="col-3 align-self-start fs-4" style="font-weight: bold; color: white;">
                             Customer
@@ -67,13 +67,13 @@
                     </div>
                     <form class="row g-3 mt-4">
                         <div class="col-md-9" style="margin-left: 3%;">
-                          <input type="email" placeholder="Input Name/Nic/Tp" class="form-control" id="inputEmail4">
+                          <input id="cusinputfield" type="" placeholder="Input Name/Nic/Tp" class="form-control" id="inputEmail4">
                         </div>
                 
                         <div class="col-md-4" style="margin-left: 3%;">
                           <select id="inputState" class="form-select">
                             <option selected>Name</option>
-                            <option>NIC</option>
+                            <option>ID</option>
                           </select>
                         </div>
                         <div class="col-10" style="margin-left: 3%; margin-bottom: 3%;">
@@ -84,27 +84,27 @@
                 
             </div>
             <div class="col-6 ">
-                <div class="col-6" style="margin-left: 52%;">
-                    <button type="button" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 45%;">New Customer</button>
+                <div class="col-6" style="margin-left: 52%; margin-top: 10%;">
+                    <button id="addnewbtn" type="button" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#cusstaticBackdrop" style="width: 45%;">New Customer</button>
                     <button id="viewallbtn" type="button" class="btn btn-success" style="width: 45%;">View All</button>
                 </div>
             </div>
           </div>
           <div class="col">
             <div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-right: 32%; margin-top: 5%;">
-              <button type="button" class="btn btn-danger">Delete</button>
+              <button id="deletebtn" type="button" class="btn btn-danger">Delete</button>
               <button type="button" class="btn btn-warning">Update</button>
               <button type="button" class="btn btn-info">Details</Details></button>
               <button type="button" class="btn btn-success">Clear</button>
             </div>
             <div style=" height: 240px; ">
-                <table id="cusdatatable" class="table table-bordered border" style="margin-top: 5%;">
+                <table id="cusdatatable" class="table table-bordered border table table-hover" style="margin-top: 5%;">
                     <thead>
                       <tr style="border-color: green;">
-                        <th scope="col">ID</th>
-                        <th scope="col">Customer Name</th>
-                        <th scope="col">TP</th>
-                        <th scope="col">Salary</th>
+                        <th scope="col" style="background-color: green; color: white;">ID</th>
+                        <th scope="col" style="background-color: green; color: white;">Customer Name</th>
+                        <th scope="col" style="background-color: green; color: white;">TP</th>
+                        <th scope="col" style="background-color: green; color: white;">Salary</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -133,7 +133,7 @@
       </div>
 
       <!--ADD New Form-->
-    <div class="modal fade" tabindex="-1" id="staticBackdrop" data-bs-backdrop="static">
+    <div class="modal fade" tabindex="-1" id="cusstaticBackdrop" data-bs-backdrop="static">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -163,7 +163,7 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-keyboard="false">Close</button>
+            <button type="button" class="btn btn-secondary" id="customerupdatebtn" data-bs-dismiss="modal" data-bs-keyboard="false">Update</button>
             <button type="button" class="btn btn-success" id="customersavebtn">Save</button>
           </div>
         </div>
@@ -179,14 +179,14 @@
           <div class="col-12">
             <div class="row">
                 <div class="col-3 align-self-start fs-4">
-                    <img src="..\img\packaging.png" style="width: 15%;" alt="">
+                    <img src="assets\img\packaging.png" style="width: 15%;" alt="">
                   Items
                 </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row" style="position: relative; height: 400px; border-radius: 15px; background-color: rgb(239, 239, 239); border: 2px solid gray;">
             <div class="col-6 ">
-                <div style="border: 2px solid rgb(197, 197, 197); ">
+                <div style="border: 2px solid rgb(197, 197, 197); position: absolute; bottom: 0%; top: 0%; margin: auto; width: 45%; height: 70%; ">
                     <div class="container-fluid bg-success">
                         <div class="col-3 align-self-start fs-4" style="font-weight: bold; color: white;">
                             Item
@@ -194,13 +194,13 @@
                     </div>
                     <form class="row g-3 mt-4">
                         <div class="col-md-9" style="margin-left: 3%;">
-                          <input type="email" placeholder="Input Item Name/Code Here" class="form-control" id="inputEmail4">
+                          <input type="" placeholder="Input Item Name/Code Here" class="form-control" id="itmCODfield">
                         </div>
                 
                         <div class="col-md-4" style="margin-left: 3%;">
                           <select id="inputState" class="form-select">
                             <option selected>Name</option>
-                            <option>NIC</option>
+                            <option>Item Code</option>
                           </select>
                         </div>
                         <div class="col-10" style="margin-left: 3%; margin-bottom: 3%;">
@@ -211,27 +211,27 @@
                 
             </div>
             <div class="col-6 ">
-                <div class="col-6" style="margin-left: 52%;">
-                    <button type="button" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#staticBackdropitem" style="width: 45%;">New Item</button>
-                    <button type="button" class="btn btn-success" style="width: 45%;">View All</button>
+                <div class="col-6" style="margin-left: 52%; margin-top: 10%;">
+                    <button type="button" class="btn btn-warning " data-bs-toggle="modal" data-bs-target="#staticBackdropitem" id="addnewitmbtn" style="width: 45%;">New Item</button>
+                    <button type="button" class="btn btn-success" style="width: 45%;" id="itmviewallbtn">View All</button>
                 </div>
             </div>
           </div>
           <div class="col">
             <div class="btn-group" role="group" aria-label="Basic mixed styles example" style="margin-right: 32%; margin-top: 5%;">
-              <button type="button" class="btn btn-danger">Delete</button>
+              <button type="button" class="btn btn-danger" id="itmdeletebtn">Delete</button>
               <button type="button" class="btn btn-warning">Update</button>
               <button type="button" class="btn btn-info">Details</Details></button>
               <button type="button" class="btn btn-success">Clear</button>
             </div>
             <div style=" height: 240px; ">
-                <table class="table table-bordered border" style="margin-top: 5%;">
+                <table id="itmtable" class="table table-bordered border table table-hover" style="margin-top: 5%;">
                     <thead>
                       <tr style="border-color: green;">
-                        <th scope="col">Item Code</th>
-                        <th scope="col">Item Name</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Quantity</th>
+                        <th scope="col" style="background-color: green; color: white;">Item Code</th>
+                        <th scope="col" style="background-color: green; color: white;">Item Name</th>
+                        <th scope="col" style="background-color: green; color: white;">Price</th>
+                        <th scope="col" style="background-color: green; color: white;">Quantity</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -291,8 +291,8 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-keyboard="false">Close</button>
-            <button type="button" class="btn btn-success">Save</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-keyboard="false" id="itemupdatebtn">Update</button>
+            <button type="button" class="btn btn-success" id="itemsavebtn">Save</button>
           </div>
         </div>
       </div>
@@ -309,50 +309,52 @@
           <div class="col-12">
             <div class="row">
                 <div class="col-3 align-self-start fs-4">
-                    <img src="..\img\checklist (1).png" style="width: 15%;" alt="">
+                    <img src="assets\img\checklist (1).png" style="width: 15%;" alt="">
                   Order
                 </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-6 ">
-                <div class="col-12 border border-2">
+          <div class="row" style="position: relative; height: 500px; border-radius: 15px; background-color: rgb(239, 239, 239); border: 2px solid gray;">
+            <div class="col-6">
+                <div class="col-12 border border-2" style="height: 81%; position: absolute; bottom: 0%; top: 0%; margin: auto; width: 48%;">
                     <div class="col-12 bg-success fs-5" style="font-weight: bold; height: 35px; color: white;">Invoice Details</div>
                     <div class="col-11 " style="margin: 3%;">
                         <form>
                             <div class="mb-3 d-flex flex-row">
                               <div style="width: 45%;">
                                 <label for="exampleInputEmail1" class="form-label">Order ID : </label>
-                                <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <input type="" class="form-control w-100" id="orderidfield" aria-describedby="emailHelp">
                               </div>
                               <div class="col-5" style="margin-left: 10%; width: 45%;">
                                 <label for="exampleInputEmail1" class="form-label">Date : </label>
-                                <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                <input type="date" class="form-control w-100" id="datefielsO">
                               </div>
                             </div>
                             <div class="mb-3 d-flex flex-row">
                                 <div style="width: 45%;">
                                   <label for="exampleInputEmail1" class="form-label">Customer : </label>
-                                  <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                  <select id="cusstate" class="form-select">
+                                    <option selected></option>
+                                  </select>
                                 </div>
                                 <div class="col-5" style="margin-left: 10%; width: 45%;">
                                   <label for="exampleInputEmail1" class="form-label">Customer ID : </label>
-                                  <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                  <input type="" class="form-control w-100" id="cusIDfield">
                                 </div>
                             </div>
                             <div class="mb-3 d-flex flex-row">
                                 <div style="width: 45%;">
                                   <label for="exampleInputEmail1" class="form-label">Name : </label>
-                                  <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                  <input type="email" class="form-control w-100" id="cusNameField" aria-describedby="emailHelp">
                                 </div>
                                 <div class="col-5" style="margin-left: 10%; width: 45%;">
                                   <label for="exampleInputEmail1" class="form-label">Salary : </label>
-                                  <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                  <input type="email" class="form-control w-100" id="CusSalaryField">
                                 </div>
                               </div>
                             <div class="mb-3">
-                              <label for="exampleInputPassword1" class="form-label">Address :</label>
-                              <input type="" class="form-control" id="exampleInputPassword1">
+                              <label for="exampleInputPassword1" class="form-label">Number :</label>
+                              <input type="" class="form-control" id="CusNumberField">
                             </div>
                           </form>
                     </div>
@@ -362,57 +364,59 @@
             <!--Second Fill Form-->
 
             <div class="col-6 ">
-                <div class="col-12 border border-2" style="height: 100%;">
+                <div class="col-12 border border-2" style="height: 81%; position: absolute; bottom: 0%; top: 0%; margin: auto; width: 48%;">
                     <div class="col-12 bg-success fs-5" style="font-weight: bold; height: 35px; color: white;">Item Select</div>
                     <div class="col-11 " style="margin: 3%;">
-                        <form>
+                        <form style="position: relative;">
                             <div class="mb-3 d-flex flex-row">
                               <div class="col-6">
                                 <label for="exampleInputEmail1" class="form-label">Item : </label>
-                                <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <select id="inputitmState" class="form-select">
+                                  <option selected></option>
+                                </select>
                               </div>
                               <div style="margin-left: 5%; width: 50%;">
                                 <label for="exampleInputEmail1" class="form-label">Item Code : </label>
-                                <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                <input type="email" class="form-control w-100" id="itIdField">
                               </div>
                             </div>
                             <div class="mb-3 d-flex flex-row">
                                 <div class="col-5">
                                   <label for="exampleInputEmail1" class="form-label">Item Name : </label>
-                                  <input type="email" class="form-control w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                  <input type="email" class="form-control w-100" id="itemNamefield" aria-describedby="emailHelp">
                                 </div>
                                 <div style="margin-left: 5%;">
                                   <label for="exampleInputEmail1" class="form-label">Price : </label>
-                                  <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                  <input type="email" class="form-control w-100" id="itemPriceField">
                                 </div>
                                 <div style="margin-left: 5%;">
                                     <label for="exampleInputEmail1" class="form-label">Qty OnHa : </label>
-                                    <input type="email" class="form-control w-100" id="exampleInputEmail1">
+                                    <input type="email" class="form-control w-100" id="qtyOnhandFieitm">
                                   </div>
                               </div>
                             <div class="mb-3">
                               <label for="exampleInputPassword1" class="form-label">Order Quantity :</label>
-                              <input type="" class="form-control" id="exampleInputPassword1">
+                              <input type="" class="form-control" id="orderQuantityField">
                             </div>
-                            <button type="button" class="btn btn-warning" style="position: relative; margin-left: 83%;">Add Item</button>
+                            <button type="button" class="btn btn-warning" style="position: relative; margin-left: 83%;" id="additembtnO">Add Item</button>
+                            <button type="button" class="btn btn-success" style="position: relative; margin-left: 65%; bottom: 37px;" id="purchObtnO">Purchase</button>
                           </form>
                     </div>
                 </div>
             </div>
           </div>
 
-
           <!--Table Div-->
 
           <div class="col">
             <div style=" height: 240px; ">
-                <table class="table table-bordered border" style="margin-top: 5%;">
+                <table class="table table-bordered border table table-hover" style="margin-top: 5%;" id="orderitmtable">
                     <thead>
                       <tr style="border-color: green;">
-                        <th scope="col">Item Code</th>
-                        <th scope="col">Item Name</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Quantity</th>
+                        <th scope="col" style="background-color: green; color: white;">Item Code</th>
+                        <th scope="col" style="background-color: green; color: white;">Item Name</th>
+                        <th scope="col" style="background-color: green; color: white;">Price</th>
+                        <th scope="col" style="background-color: green; color: white;">Quantity</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -445,8 +449,15 @@
 
 
     <script src="assets\js\bootstrap.js"></script>
-
     <script src="assets\js\jquery-3.7.1.min.js"></script>
+    <script src="model/Customer_model.js"></script>
+    <script src="model/Item_model.js"></script>
+    <script src="model/Order_details.js"></script>
+    <script src="model/Order_model.js"></script>
+    <script src="db/DB.js"></script>
+    <script src="controllers/CustomerController.js"></script>
+    <script src="controllers/ItemController.js"></script>
+    <script src="controllers/OrderController.js"></script>
     <script>
 
         const cuspagebtn = document.querySelector("#cusbtn");
@@ -498,74 +509,6 @@
                 cuspagebtn.classList.remove("active");
             }
         });
-
-
-        const savebtn = document.querySelector("#customersavebtn");
-        const cusnam = document.querySelector("#cusName");
-        const customerid = document.querySelector("#cusId");
-        const address = document.querySelector("#cusAddress");
-        const Salary = document.querySelector("#cusSalary");
-
-        const customerarr = new Array();
-        const table = document.querySelector("#cusdatatable");
-        const viewallbtn  =  document.querySelector("#viewallbtn");
-
-        savebtn.addEventListener("click",function(){
-
-          var customer={
-
-            nam: cusName.value,
-            cusid: cusId.value,
-            cusnomber: cusAddress.value,
-            cussalry: cusSalary.value,
-  
-            getAll:function(){
-              return customer;
-            }
-  
-          };
-
-          //Data Save
-          customerarr.push(customer);
-          console.log(customerarr);
-
-          //Data Add For Table
-          datarow();
-          
-        });
-
-
-        function datarow(){
-
-          const tr = document.createElement("tr");
-          const td1 = document.createElement("td");
-          const td2 = document.createElement("td");
-          const td3 = document.createElement("td");
-          const td4 = document.createElement("td");
-
-          td1.textContent=cusnam.value;
-          td2.textContent=cusId.value;
-          td3.textContent=cusAddress.value;
-          td4.textContent=cusSalary.value;
-
-          tr.append(td1,td2,td3,td4);
-          document.querySelector("#cusdatatable").append(tr);
-
-        }
-
-
-        //View All Customer
-
-        viewallbtn.addEventListener("click",function(){
-          getAllData();
-        });
-
-        function getAllData(){
-          for(cus in customerarr){
-            console.log(customerarr[cus]);
-          }
-        }
-
 
     </script>
 </body>

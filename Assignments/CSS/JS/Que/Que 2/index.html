@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets\css\bootstrap.css">
+
+    <style>
+
+        /*Pac-Man Walking Section*/
+        section:nth-child(1){
+            position: absolute;
+            width: 70%;
+            top: 0%;
+            bottom: 0%;
+            margin: auto;
+            height: fit-content;
+            display: flex;
+        }
+
+        section>div{
+            position: relative;
+            width: calc(100%/6);
+            height: 200px;
+            background: url("/assets/img/pacMan.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        section>div>div{
+            width: fit-content;
+            position: absolute;
+            right: 0%;
+            top: 0%;
+        }
+
+        /*Morning & Night Gif*/
+
+        section:nth-child(2)>div{
+            position: absolute;
+            background: url("/assets/img/night_day.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            right: 0%;
+            width: 30%;
+            height: 50%;
+            top: 13%;
+        }
+
+        /*Button Section*/
+        section:nth-child(3){
+            width: fit-content;
+            position: absolute;
+            top: 70%;
+            left: 0%;
+            right: 0%;
+            margin: auto;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <section>
+        <div>
+            <div>
+                <h1>A</h1>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h1>B</h1>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h1>C</h1>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h1>D</h1>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h1>E</h1>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h1>F</h1>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div></div>
+    </section>
+
+    <section>
+        <button id="startbtn" type="button" class="btn btn-primary">Start</button>
+        <button id="stopbtn" type="button" class="btn btn-danger">Stop</button>
+    </section>
+    
+    <script src="assets\js\bootstrap.js"></script>
+
+    <script>
+
+        const startbtn = document.querySelector("#startbtn");
+        const stopbtn = document.querySelector("#stopbtn");
+        const h1 = document.querySelectorAll("h1");
+        let interval;
+
+        let Arr = new Array('A','B','C','D','E','F');
+
+        startbtn.addEventListener("click",function(){
+            clearInterval(interval);
+            startwalk();
+        });
+
+        stopbtn.addEventListener("click",function(){
+            clearInterval(interval);
+        });
+
+        function startwalk(){
+            interval=setInterval(function(){
+                for(i in Arr){
+                    console.log(h1[i].innerText);
+                    h1[i].textContent=(Arr[i]);
+                }
+
+                Arr.unshift(Arr[5]);
+                Arr.pop();
+            },1500);
+        }
+
+    </script>
+</body>
+</html>

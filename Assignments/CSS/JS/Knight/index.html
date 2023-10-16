@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knight</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    
+    <style>
+        section:nth-child(1){
+            position: absolute;
+            width: fit-content;
+            top: 10%;
+            left: 0%;
+            right: 0%;
+            margin: auto;
+            text-align: center;
+        }
+
+        section:nth-child(3){
+            position: absolute;
+            top: 60%;
+            left: 43%;
+            bottom: 0%;
+            margin: auto;
+            width: fit-content;
+            height: 10%;
+        }
+
+        div:nth-child(2)>div{
+            display: flex;
+        }
+
+        section:nth-child(4){
+            position: absolute;
+            left: 20%;
+            right: 0%;
+            top: 76%;
+            margin: auto;
+            width: fit-content;
+        }
+
+        .moonbtn{
+            transition: all;
+            transition-duration: 4s;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: url('assets/img/full-moon.png');
+            background-size: cover;
+            top: 5%;
+            right: 5%;
+            border-color: transparent;
+            transform: rotate(0deg);
+        }
+
+        .moonbtn:hover{
+            transition: all;
+            transition-duration: 4s;
+            transform: rotate(180deg);
+        }
+
+        .lightbtn{
+            display: none;
+            transition: all;
+            transition-duration: 4s;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: url('assets/img/lightbulb.png');
+            background-size: cover;
+            top: 5%;
+            right: 5%;
+            background-color: white;
+            border-radius: 100%;
+            border-color: transparent;
+            transform: rotate(0deg);
+        }
+
+        .lightbtn:hover{
+            transition: all;
+            transition-duration: 4s;
+            transform: rotate(45deg);
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <h1>KNIGHT RIDER</h1>
+        <div style="display: flex;">
+            <h4 style="width: 70px; color: red;">Speed </h4>  
+            <h4 id="speed" style="width: 40px; color: blue;">100</h4>
+            <h4 style="width: 10px; color: red;">|</h4>
+            <h4 style="width: 145px; color: red;">Waiting Time </h4>
+            <h4 id="waitingtime" style="color: blue;">100</h4>
+        </div>
+    </section>
+    <div id="maindiv" class="container col-10 position-absolute top-0 bottom-0 m-auto" style="height: 15%; left: 0%; right: 0%; border-top: 3px solid black; border-bottom: 3px solid black;">
+        <div class="row position-relative h-100">
+            <div class="col-2 h-75 position-relative top-0 bottom-0 m-auto border border-2 border-black" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;"></div>
+            <div class="col-2 h-75 position-relative top-0 bottom-0 m-auto border border-2 border-black"></div>
+            <div class="col-2 h-75 position-relative top-0 bottom-0 m-auto border border-2 border-black"></div>
+            <div class="col-2 h-75 position-relative top-0 bottom-0 m-auto border border-2 border-black"></div>
+            <div class="col-2 h-75 position-relative top-0 bottom-0 m-auto border border-2 border-black"></div>
+            <div class="col-2 h-75 position-relative top-0 bottom-0 m-auto border border-2 border-black" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;"></div>
+        </div>
+    </div>
+
+    <section>
+        <button id="startbtn" type="button" class="btn btn-primary">Start</button>
+        <button id="stopbtn" type="button" class="btn btn-danger">Stop</button>
+    </section>
+
+    <section>
+        <input type="range" id="slider" name="slider" min="0" max="100" step="1" value="0">
+        <!--<p>Value: <span id="sliderValue">50</span></p>-->
+    </section>
+
+    <section>
+        <button class="moonbtn"></button>
+        <button class="lightbtn"></button>
+    </section>
+
+    <audio id="music" src="assets/mp3/Knight.mp3" loop></audio>
+
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <script>
+        let firstinterval;
+        let secondinterval;
+        let firsttimeout;
+        let secondtimeout;
+        const body = $('body');
+        const speed = $('#speed');
+        const waitingtime = $('#waitingtime');
+        const alldiv = document.querySelectorAll('body>div>div>div');
+        const colorArr = new Array('red','white','white','white','white','rgb(255, 139, 139)');
+        const colorArrforreverse = new Array('rgb(255, 139, 139)','white','white','white','white','red');
+
+        let setSpeed = 100;
+        let setWaitingTime = 1000;
+
+        const startbtn = $('#startbtn');
+        const stopbtn = $('#stopbtn');
+        const darkbtn = $('.moonbtn');
+        const lightbtn = $('.lightbtn');
+
+        const music = document.querySelector('#music');
+
+        const slider = document.getElementById("slider");
+        const sliderValue = document.getElementById("sliderValue");
+
+        startbtn.click(function(){
+            clearInterval(firstinterval);
+            clearTimeout(firsttimeout);
+            
+            firsttimeout = setTimeout(function(){
+                rightsidepattern();
+            },setWaitingTime);
+
+            music.play();
+        });
+
+        stopbtn.click(function(){
+            clearInterval(secondinterval);
+            clearInterval(firstinterval);
+            clearTimeout(firsttimeout);
+
+            music.pause();
+        });
+
+        //This Function For Change Color (left to Right) 
+        function rightsidepattern(){
+            clearInterval(firstinterval);
+            firstinterval = setInterval(function(){
+                for(i in colorArr){
+                    alldiv[i].style.backgroundColor = colorArr[i];
+                }
+
+                if(colorArr[5]==='red'){
+                    clearInterval(firstinterval);
+                    firsttimeout = setTimeout(function(){
+                        clearInterval(secondinterval);
+                        leftsidepattern();
+                    },setWaitingTime);
+                }
+
+                //clearTimeout(secondtimeout);
+                colorArr.unshift(colorArr[5]);
+                colorArr.pop();  
+            },setSpeed);
+        }
+
+        //This Function For Change Color (Right to Left)
+        function leftsidepattern(){
+            clearInterval(secondinterval);
+            secondinterval = setInterval(function(){
+                for(let i = 5; i>=0; i--){
+                    alldiv[i].style.backgroundColor = colorArrforreverse[i];
+                }
+
+                if(colorArrforreverse[0]==='red'){
+                    clearInterval(secondinterval);
+                    firsttimeout = setTimeout(function(){
+                        clearInterval(firstinterval);
+                        rightsidepattern();
+                    },setWaitingTime);
+                }
+
+                colorArrforreverse.push(colorArrforreverse[0]);
+                colorArrforreverse.shift();
+            },setSpeed);
+        }
+
+        //This Function For When Change the Slider Value Set Text For (Speed & Waiting Time) , Set New Value For (setSpeed & setWaitingTime)
+        slider.addEventListener("input", function() {
+            //sliderValue.textContent = slider.value;
+            speed.text((100-slider.value));
+            setSpeed = parseInt (100-(parseInt(slider.value)));
+            console.log(setSpeed);
+            waitingtime.text((1000-((parseInt(slider.value))*9)))
+            setWaitingTime = parseInt (1000-((parseInt(slider.value))*9));
+        });
+        console.log('hi');
+
+        //This Click Event Bind For When Click The Moon Button Change The Color as Dark
+        darkbtn.click(function(){
+            const h1 = $('h1');
+            const maindiv = $('#maindiv');
+
+            lightbtn.css('display','block');
+            body.css('background-color','black');
+            h1.css('color','white');
+            maindiv.css({
+                'border-bottom':'3px solid white',
+                'border-top':'3px solid white'
+            });
+
+            for(let i = 0; i <= 5; i++){
+                alldiv[i].style.backgroundColor = 'white';
+            }
+        });
+
+        //This Click Event Bind For When Click The Light Button Change The Color as Light
+        lightbtn.click(function(){
+            const h1 = $('h1');
+            const maindiv = $('#maindiv');
+
+            lightbtn.css('display','none');
+            darkbtn.css('display','block');
+            body.css('background-color','white');
+            h1.css('color','black');
+            maindiv.css({
+                'border-bottom':'3px solid black',
+                'border-top':'3px solid black'
+            });
+
+            for(let i = 0; i <= 5; i++){
+                alldiv[i].style.backgroundColor = 'white';
+            }
+        });
+    </script>
+</body>
+</html>
