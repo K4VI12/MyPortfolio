@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -26,23 +27,14 @@
     background-color: transparent;
 }
 
-
-:root {
-    --bg-color: #579BB1;
-    --second-bg-color: #579BB1;
-    --text-color: #F8F4EA;
-    --main-color: #DAC0A3;
-
-}
-
 html {
     font-size: 62.5%;
 
 }
 
 body {
-    background: var(--bg-color);
-    color: var(--text-color);
+    background: #579BB1;
+    color: #F8F4EA;
 }
 
 section {
@@ -70,15 +62,15 @@ section {
 
 .logo {
     font-size: 3rem;
-    color: var(--text-color);
+    color: #F8F4EA;
     font-weight: 600;
     cursor: default;
 }
 
 .navbar a {
-    color: var(--main-color);
+    color: #DAC0A3;
     font-size: 1.9rem;
-    color: var(--text-color);
+    color: #F8F4EA;
     margin-left: 4rem;
     transition: .3s;
 }
@@ -90,7 +82,7 @@ section {
 
 #menu-icon {
     font-size: 3.6rem;
-    color: var(--text-color);
+    color: #F8F4EA;
     display: none;
 }
 
@@ -152,7 +144,7 @@ span {
     border: .2rem solid;
     border-radius: 40%;
     font-size: 4rem;
-    color: var(--bg-color);
+    color: #579BB1;
     margin: 3rem 1.5rem 3rem 0;
     transition: .5s ease;
     animation-name: anima;
@@ -161,9 +153,10 @@ span {
 }
 
 @keyframes giticon {
-    from{
+    from {
         color: #00D7FF;
     }
+
     to {
         color: #00FFAB;
     }
@@ -182,7 +175,7 @@ span {
     border-radius: 4rem;
     box-shadow: 0 0 1rem #F5FDB0;
     font-size: 1.9rem;
-    color: var(--second-bg-color);
+    color: #579BB1;
     letter-spacing: .1rem;
     font-weight: 600;
     transition: .5s ease;
@@ -197,7 +190,7 @@ span {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background: var(--second-bg-color);
+    background: #579BB1;
 }
 
 .about-img img {
@@ -227,7 +220,7 @@ span {
 }
 
 .services h2 {
-    margin-top: 1rem;
+    margin-top: 5rem;
     margin-bottom: 15rem;
 }
 
@@ -248,46 +241,41 @@ span {
     text-align: center;
     transition: .7s ease;
     box-shadow: 0 20px 40px rgba(0, 0, 0, .2);
-    border: 0.3rem solid rgba(255, 255, 255, .5);
-    border-right: 0.3rem solid rgba(255, 255, 255, .2);
-    border-bottom: 0.3rem solid rgba(255, 255, 255, .2);
-    border-left: 0.3rem solid rgba(255, 255, 255, .2);
-    border-top: 0.3rem solid rgba(255, 255, 255, .2);
-    backdrop-filter: blur(10px);
 }
 
 .services-container .services-box:hover {
-    border-color: var(--main-color);
+    border-color: #DAC0A3;
     transform: scale(1.1);
 }
 
 .services-box i {
     font-size: 5rem;
-    color: var(--main-color);
+    color: #DAC0A3;
 }
 
 .services-box h3 {
     font-size: 3.5rem;
-    text-shadow: 0 10px 10px rgba(0, 0, 0, .5);
+    text-shadow: 0 10px 20px rgba(0, 0, 0, .5);
 
 }
 
 .services-box p {
-    font-size: 2.3rem;
-    margin: 1rem 0 3rem;
+    font-size: 3rem;
+    margin: 3rem 0 3rem;
 }
 
 .projects {
-    background: var(--second-bg-color);
+    background: #579BB1;
 }
 
 .projects h2 {
-    margin-bottom: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
 }
 
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 2fr);
     align-items: center;
     gap: 2.5rem;
 }
@@ -316,7 +304,7 @@ span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    background: linear-gradient(rgba(0, 0, 0, .1), #0fe);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -347,26 +335,27 @@ span {
     align-items: center;
     width: 5rem;
     height: 5rem;
-    background: var(--text-color);
+    background: #F8F4EA;
     border-radius: 50%;
 }
 
 .projects-layer a i {
     font-size: 5rem;
-    color: var(--second-bg-color);
+    color: #579BB1;
 }
 
 .assignment {
-    background: var(--second-bg-color);
+    background: #579BB1;
 }
 
 .assignment h2 {
-    margin-bottom: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 12rem;
 }
 
 .assignment-container {
     display: grid;
-    grid-template-columns: repeat(1, 2fr);
+    grid-template-columns: repeat(4, 2fr);
     align-items: center;
     gap: 2.5rem;
 }
@@ -374,7 +363,7 @@ span {
 .assignment-container .assignment-box {
     position: relative;
     border-radius: 2rem;
-    box-shadow: 0 0 3rem rgba(204, 197, 197, 0.5);
+    box-shadow: 0 0 3rem rgba(204, 197, 197, 0.5), #BFDB38;
     overflow: hidden;
     display: flex;
 }
@@ -395,7 +384,7 @@ span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    background: linear-gradient(rgba(0, 0, 0, .1), #FFD95A);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -415,24 +404,20 @@ span {
     font-size: 3rem;
 }
 
-.assignment-layer p {
-    font-size: 2.3rem;
-    margin: 3rem 0 1rem;
-}
-
 .assignment-layer a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 5rem;
     height: 5rem;
-    background: var(--text-color);
+    background: #F8F4EA;
     border-radius: 50%;
 }
 
 .assignment-layer a i {
     font-size: 5rem;
-    color: var(--second-bg-color);
+    color: #579BB1;
+
 }
 
 .contact h2 {
@@ -479,6 +464,8 @@ span {
 }
 
 .footer {
+    height: 25rem;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -507,7 +494,7 @@ span {
 
 .footer-iconTop a i {
     font-size: 2.4rem;
-    color: var(--text-color);
+    color: #F8F4EA;
 
 }
 
@@ -558,7 +545,7 @@ span {
         left: 0;
         width: 100%;
         padding: 1rem 3%;
-        background: var(--bg-color);
+        background: #579BB1;
         border-top: .1rem solid rgba(0, 0, 0, .2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
         display: none;
@@ -611,7 +598,7 @@ span {
     .projects-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .assignment h2 {
         margin-bottom: 3rem;
     }
@@ -625,7 +612,11 @@ span {
     .projects-container {
         grid-template-columns: 1fr;
     }
-    
+
+    .assignment-container {
+        grid-template-columns: 1fr;
+    }
+
     .assignment-container {
         grid-template-columns: 1fr;
     }
